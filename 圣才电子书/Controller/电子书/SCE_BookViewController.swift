@@ -28,9 +28,21 @@ class SCE_BookViewController: SCBaseViewController{
             make.top.equalTo(self.view).offset(NavigationH)
             make.bottom.equalTo(self.view).offset(-50)
         }
+        
         e_bookTitleView.searchImageButton.rac_signalForControlEvents(UIControlEvents.TouchUpInside).subscribeNext { (value) in
             SCLog("点击了搜索按钮")
         }
+        
+        e_BookCV.CVSignal.subscribeNext { (ClickSignal) in
+            
+           ClickSignal.subscribeNext({ (c) in
+            
+            SCLog("点击了查看我的电子书")
+            
+           })
+            
+        }
+        
         
                
         self.showHUD()
@@ -43,6 +55,7 @@ class SCE_BookViewController: SCBaseViewController{
     func requestDataSouce() {
         
         weak var wself = self
+        
         // 发送请求
         let signal = self.e_BookRequest.requestCommand.execute(nil)
         signal.subscribeNext({ (dataArray) in
@@ -78,7 +91,6 @@ class SCE_BookViewController: SCBaseViewController{
         var e_BookCV = SCE_BookCV()
         e_BookCV.backgroundColor = UIColor.cyanColor()
         
-      
         return e_BookCV
     }()
 }

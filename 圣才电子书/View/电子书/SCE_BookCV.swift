@@ -11,7 +11,6 @@ import UIKit
 class SCE_BookCV: UIView {
     
     var lastIndex:NSIndexPath?
-    
     //数据源
     var e_BookModelArray:[SCE_BookModel] = [] {
         didSet {
@@ -30,6 +29,13 @@ class SCE_BookCV: UIView {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    lazy var CVSignal:RACSubject = {
+       var CVSignal = RACSubject.init()
+        return CVSignal
+    }()
+    
+    
 
     // MARK: - collectionView
     lazy var collectionView:UICollectionView = {
@@ -116,10 +122,9 @@ extension SCE_BookCV:UICollectionViewDataSource,UICollectionViewDelegate,UIColle
              let headerView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "SCE_BookCVTopHV", forIndexPath: indexPath) as! SCE_BookCVTopHV
             
             
-            headerView.e_BookButton.rac_signalForControlEvents(UIControlEvents.TouchUpInside).subscribeNext { (value) in
-                SCLog("点击了查看我的电子书")
-            }
-
+            self.CVSignal.sendNext(headerView.e_BookButton.rac_signalForControlEvents(UIControlEvents.TouchUpInside))
+            
+            
             if kind == UICollectionElementKindSectionHeader {
                 
                 headerView.titleLabel.text = e_BookModel.name
