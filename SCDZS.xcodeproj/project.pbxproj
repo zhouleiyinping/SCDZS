@@ -1,0 +1,938 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4BC2864928727D970962090C /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8133E75B154981E472B8FEFF /* Pods.framework */; };
+		712BBA861D26049900E388E5 /* SCFindVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712BBA851D26049900E388E5 /* SCFindVM.swift */; };
+		712BBA891D26054000E388E5 /* SCFindModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712BBA881D26054000E388E5 /* SCFindModel.swift */; };
+		712BBA8C1D26062100E388E5 /* Extension+NSObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712BBA8B1D26062100E388E5 /* Extension+NSObject.swift */; };
+		712BBA921D260C5900E388E5 /* SCE-BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712BBA911D260C5900E388E5 /* SCE-BookModel.swift */; };
+		712BBA951D26108200E388E5 /* SCE_BookVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712BBA941D26108200E388E5 /* SCE_BookVM.swift */; };
+		712BBA981D2617D500E388E5 /* SCE_BookTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712BBA971D2617D500E388E5 /* SCE_BookTitleView.swift */; };
+		712BBA9A1D263B6100E388E5 /* SCE_BookCV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712BBA991D263B6100E388E5 /* SCE_BookCV.swift */; };
+		712BBA9C1D263E9B00E388E5 /* SCE_BookCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712BBA9B1D263E9B00E388E5 /* SCE_BookCVCell.swift */; };
+		712BBA9E1D265AEA00E388E5 /* SCE_BookCVHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712BBA9D1D265AEA00E388E5 /* SCE_BookCVHeaderView.swift */; };
+		712BBAA01D265DDF00E388E5 /* SCE_BookCVTopHV.swift in Sources */ = {isa = PBXBuildFile; fileRef = 712BBA9F1D265DDF00E388E5 /* SCE_BookCVTopHV.swift */; };
+		7131AD5B1D0E53240010EE23 /* _____Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7131AD5A1D0E53240010EE23 /* _____Tests.swift */; };
+		7131AD661D0E53240010EE23 /* _____UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7131AD651D0E53240010EE23 /* _____UITests.swift */; };
+		716370A71D24BD75005B6B52 /* SCFindViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7163707A1D24BD75005B6B52 /* SCFindViewController.swift */; };
+		716370A81D24BD75005B6B52 /* SCMyCenterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7163707C1D24BD75005B6B52 /* SCMyCenterViewController.swift */; };
+		716370A91D24BD75005B6B52 /* SCFriendViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7163707E1D24BD75005B6B52 /* SCFriendViewController.swift */; };
+		716370AA1D24BD75005B6B52 /* SCE_BookViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716370801D24BD75005B6B52 /* SCE_BookViewController.swift */; };
+		716370AB1D24BD75005B6B52 /* SCHomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716370821D24BD75005B6B52 /* SCHomeViewController.swift */; };
+		716370AC1D24BD75005B6B52 /* SCKllViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716370831D24BD75005B6B52 /* SCKllViewController.swift */; };
+		716370AD1D24BD75005B6B52 /* SCLkkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716370841D24BD75005B6B52 /* SCLkkViewController.swift */; };
+		716370AE1D24BD75005B6B52 /* SCMyCenterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716370871D24BD75005B6B52 /* SCMyCenterModel.swift */; };
+		716370AF1D24BD75005B6B52 /* SCMyCenterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7163708A1D24BD75005B6B52 /* SCMyCenterCell.swift */; };
+		716370B01D24BD75005B6B52 /* SCButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7163708C1D24BD75005B6B52 /* SCButton.swift */; };
+		716370B11D24BD75005B6B52 /* SCHomeTitleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7163708D1D24BD75005B6B52 /* SCHomeTitleView.swift */; };
+		716370B21D24BD75005B6B52 /* SCMyCenterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716370901D24BD75005B6B52 /* SCMyCenterVM.swift */; };
+		716370B31D24BD75005B6B52 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716370921D24BD75005B6B52 /* AppDelegate.swift */; };
+		716370B41D24BD75005B6B52 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 716370931D24BD75005B6B52 /* Assets.xcassets */; };
+		716370B51D24BD75005B6B52 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 716370941D24BD75005B6B52 /* Images.xcassets */; };
+		716370B61D24BD75005B6B52 /* Public.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716370951D24BD75005B6B52 /* Public.swift */; };
+		716370B71D24BD75005B6B52 /* BaseNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716370981D24BD75005B6B52 /* BaseNavigationController.swift */; };
+		716370B81D24BD75005B6B52 /* SCBaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716370991D24BD75005B6B52 /* SCBaseTabBarController.swift */; };
+		716370B91D24BD75005B6B52 /* SCBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7163709A1D24BD75005B6B52 /* SCBaseViewController.swift */; };
+		716370BA1D24BD75005B6B52 /* UIViewController+MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 7163709E1D24BD75005B6B52 /* UIViewController+MBProgressHUD.m */; };
+		716370BB1D24BD75005B6B52 /* YWSpritesLoadingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 716370A01D24BD75005B6B52 /* YWSpritesLoadingView.m */; };
+		716370BC1D24BD75005B6B52 /* SCRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 716370A61D24BD75005B6B52 /* SCRequest.swift */; };
+		716370BE1D24BDA1005B6B52 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 716370BD1D24BDA1005B6B52 /* Info.plist */; };
+		716370C51D24BDF4005B6B52 /* LCPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 716370C01D24BDF4005B6B52 /* LCPanGestureRecognizer.m */; };
+		716370C61D24BDF4005B6B52 /* LCPanNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 716370C21D24BDF4005B6B52 /* LCPanNavigationController.m */; };
+		716370C71D24BDF4005B6B52 /* UIView+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 716370C41D24BDF4005B6B52 /* UIView+Snapshot.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		7131AD571D0E53240010EE23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7131AD3A1D0E53240010EE23 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7131AD411D0E53240010EE23;
+			remoteInfo = "圣才电子书";
+		};
+		7131AD621D0E53240010EE23 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7131AD3A1D0E53240010EE23 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7131AD411D0E53240010EE23;
+			remoteInfo = "圣才电子书";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		712BBA851D26049900E388E5 /* SCFindVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCFindVM.swift; sourceTree = "<group>"; };
+		712BBA881D26054000E388E5 /* SCFindModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCFindModel.swift; sourceTree = "<group>"; };
+		712BBA8B1D26062100E388E5 /* Extension+NSObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Extension+NSObject.swift"; sourceTree = "<group>"; };
+		712BBA911D260C5900E388E5 /* SCE-BookModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SCE-BookModel.swift"; sourceTree = "<group>"; };
+		712BBA941D26108200E388E5 /* SCE_BookVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCE_BookVM.swift; sourceTree = "<group>"; };
+		712BBA971D2617D500E388E5 /* SCE_BookTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCE_BookTitleView.swift; sourceTree = "<group>"; };
+		712BBA991D263B6100E388E5 /* SCE_BookCV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCE_BookCV.swift; sourceTree = "<group>"; };
+		712BBA9B1D263E9B00E388E5 /* SCE_BookCVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCE_BookCVCell.swift; sourceTree = "<group>"; };
+		712BBA9D1D265AEA00E388E5 /* SCE_BookCVHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCE_BookCVHeaderView.swift; sourceTree = "<group>"; };
+		712BBA9F1D265DDF00E388E5 /* SCE_BookCVTopHV.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCE_BookCVTopHV.swift; sourceTree = "<group>"; };
+		7131AD421D0E53240010EE23 /* SCDZS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SCDZS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7131AD561D0E53240010EE23 /* SCDZS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SCDZS.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7131AD5A1D0E53240010EE23 /* _____Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_____Tests.swift"; sourceTree = "<group>"; };
+		7131AD5C1D0E53240010EE23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7131AD611D0E53240010EE23 /* SCDZS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SCDZS.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7131AD651D0E53240010EE23 /* _____UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "_____UITests.swift"; sourceTree = "<group>"; };
+		7131AD671D0E53240010EE23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7163707A1D24BD75005B6B52 /* SCFindViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCFindViewController.swift; sourceTree = "<group>"; };
+		7163707C1D24BD75005B6B52 /* SCMyCenterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCMyCenterViewController.swift; sourceTree = "<group>"; };
+		7163707E1D24BD75005B6B52 /* SCFriendViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCFriendViewController.swift; sourceTree = "<group>"; };
+		716370801D24BD75005B6B52 /* SCE_BookViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCE_BookViewController.swift; sourceTree = "<group>"; };
+		716370821D24BD75005B6B52 /* SCHomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCHomeViewController.swift; sourceTree = "<group>"; };
+		716370831D24BD75005B6B52 /* SCKllViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCKllViewController.swift; sourceTree = "<group>"; };
+		716370841D24BD75005B6B52 /* SCLkkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLkkViewController.swift; sourceTree = "<group>"; };
+		716370871D24BD75005B6B52 /* SCMyCenterModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCMyCenterModel.swift; sourceTree = "<group>"; };
+		7163708A1D24BD75005B6B52 /* SCMyCenterCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCMyCenterCell.swift; sourceTree = "<group>"; };
+		7163708C1D24BD75005B6B52 /* SCButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCButton.swift; sourceTree = "<group>"; };
+		7163708D1D24BD75005B6B52 /* SCHomeTitleView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCHomeTitleView.swift; sourceTree = "<group>"; };
+		716370901D24BD75005B6B52 /* SCMyCenterVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCMyCenterVM.swift; sourceTree = "<group>"; };
+		716370921D24BD75005B6B52 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		716370931D24BD75005B6B52 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		716370941D24BD75005B6B52 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		716370951D24BD75005B6B52 /* Public.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Public.swift; sourceTree = "<group>"; };
+		716370961D24BD75005B6B52 /* 圣才电子书-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "圣才电子书-Bridging-Header.h"; sourceTree = "<group>"; };
+		716370981D24BD75005B6B52 /* BaseNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseNavigationController.swift; sourceTree = "<group>"; };
+		716370991D24BD75005B6B52 /* SCBaseTabBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCBaseTabBarController.swift; sourceTree = "<group>"; };
+		7163709A1D24BD75005B6B52 /* SCBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCBaseViewController.swift; sourceTree = "<group>"; };
+		7163709D1D24BD75005B6B52 /* UIViewController+MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+MBProgressHUD.h"; sourceTree = "<group>"; };
+		7163709E1D24BD75005B6B52 /* UIViewController+MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+MBProgressHUD.m"; sourceTree = "<group>"; };
+		7163709F1D24BD75005B6B52 /* YWSpritesLoadingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWSpritesLoadingView.h; sourceTree = "<group>"; };
+		716370A01D24BD75005B6B52 /* YWSpritesLoadingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWSpritesLoadingView.m; sourceTree = "<group>"; };
+		716370A61D24BD75005B6B52 /* SCRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCRequest.swift; sourceTree = "<group>"; };
+		716370BD1D24BDA1005B6B52 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		716370BF1D24BDF4005B6B52 /* LCPanGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCPanGestureRecognizer.h; sourceTree = "<group>"; };
+		716370C01D24BDF4005B6B52 /* LCPanGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCPanGestureRecognizer.m; sourceTree = "<group>"; };
+		716370C11D24BDF4005B6B52 /* LCPanNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LCPanNavigationController.h; sourceTree = "<group>"; };
+		716370C21D24BDF4005B6B52 /* LCPanNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCPanNavigationController.m; sourceTree = "<group>"; };
+		716370C31D24BDF4005B6B52 /* UIView+Snapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Snapshot.h"; sourceTree = "<group>"; };
+		716370C41D24BDF4005B6B52 /* UIView+Snapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Snapshot.m"; sourceTree = "<group>"; };
+		8133E75B154981E472B8FEFF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		948CDC67646270F9C35C9EC5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		AF1BED6F817A44027DBE1A1D /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7131AD3F1D0E53240010EE23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BC2864928727D970962090C /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7131AD531D0E53240010EE23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7131AD5E1D0E53240010EE23 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		246756A0F5A8E82EA9047E4E /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				948CDC67646270F9C35C9EC5 /* Pods.debug.xcconfig */,
+				AF1BED6F817A44027DBE1A1D /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6D85444E9EFB2430EE3986F1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8133E75B154981E472B8FEFF /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		712BBA841D26048300E388E5 /* 发现 */ = {
+			isa = PBXGroup;
+			children = (
+				712BBA851D26049900E388E5 /* SCFindVM.swift */,
+			);
+			path = "发现";
+			sourceTree = "<group>";
+		};
+		712BBA871D26053000E388E5 /* 发现 */ = {
+			isa = PBXGroup;
+			children = (
+				712BBA881D26054000E388E5 /* SCFindModel.swift */,
+			);
+			path = "发现";
+			sourceTree = "<group>";
+		};
+		712BBA8A1D26060E00E388E5 /* 扩展 */ = {
+			isa = PBXGroup;
+			children = (
+				712BBA8B1D26062100E388E5 /* Extension+NSObject.swift */,
+			);
+			path = "扩展";
+			sourceTree = "<group>";
+		};
+		712BBA8D1D26073700E388E5 /* 发现 */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "发现";
+			sourceTree = "<group>";
+		};
+		712BBA901D260C4100E388E5 /* 电子书 */ = {
+			isa = PBXGroup;
+			children = (
+				712BBA911D260C5900E388E5 /* SCE-BookModel.swift */,
+			);
+			path = "电子书";
+			sourceTree = "<group>";
+		};
+		712BBA931D26106F00E388E5 /* 电子书 */ = {
+			isa = PBXGroup;
+			children = (
+				712BBA941D26108200E388E5 /* SCE_BookVM.swift */,
+			);
+			path = "电子书";
+			sourceTree = "<group>";
+		};
+		712BBA961D2617BE00E388E5 /* 电子书 */ = {
+			isa = PBXGroup;
+			children = (
+				712BBA971D2617D500E388E5 /* SCE_BookTitleView.swift */,
+				712BBA991D263B6100E388E5 /* SCE_BookCV.swift */,
+				712BBA9B1D263E9B00E388E5 /* SCE_BookCVCell.swift */,
+				712BBA9D1D265AEA00E388E5 /* SCE_BookCVHeaderView.swift */,
+				712BBA9F1D265DDF00E388E5 /* SCE_BookCVTopHV.swift */,
+			);
+			path = "电子书";
+			sourceTree = "<group>";
+		};
+		7131AD391D0E53240010EE23 = {
+			isa = PBXGroup;
+			children = (
+				716370771D24BD75005B6B52 /* 圣才电子书 */,
+				7131AD591D0E53240010EE23 /* 圣才电子书Tests */,
+				7131AD641D0E53240010EE23 /* 圣才电子书UITests */,
+				7131AD431D0E53240010EE23 /* Products */,
+				246756A0F5A8E82EA9047E4E /* Pods */,
+				6D85444E9EFB2430EE3986F1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7131AD431D0E53240010EE23 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7131AD421D0E53240010EE23 /* SCDZS.app */,
+				7131AD561D0E53240010EE23 /* SCDZS.xctest */,
+				7131AD611D0E53240010EE23 /* SCDZS.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7131AD591D0E53240010EE23 /* 圣才电子书Tests */ = {
+			isa = PBXGroup;
+			children = (
+				7131AD5A1D0E53240010EE23 /* _____Tests.swift */,
+				7131AD5C1D0E53240010EE23 /* Info.plist */,
+			);
+			path = "圣才电子书Tests";
+			sourceTree = "<group>";
+		};
+		7131AD641D0E53240010EE23 /* 圣才电子书UITests */ = {
+			isa = PBXGroup;
+			children = (
+				7131AD651D0E53240010EE23 /* _____UITests.swift */,
+				7131AD671D0E53240010EE23 /* Info.plist */,
+			);
+			path = "圣才电子书UITests";
+			sourceTree = "<group>";
+		};
+		716370771D24BD75005B6B52 /* 圣才电子书 */ = {
+			isa = PBXGroup;
+			children = (
+				716370781D24BD75005B6B52 /* Controller */,
+				716370851D24BD75005B6B52 /* Model */,
+				716370881D24BD75005B6B52 /* View */,
+				7163708E1D24BD75005B6B52 /* ViewModel */,
+				716370911D24BD75005B6B52 /* 公共 */,
+				716370971D24BD75005B6B52 /* 基类 */,
+				7163709B1D24BD75005B6B52 /* 工具 */,
+				716370A11D24BD75005B6B52 /* 第三方 */,
+				716370A51D24BD75005B6B52 /* 网络请求 */,
+			);
+			path = "圣才电子书";
+			sourceTree = "<group>";
+		};
+		716370781D24BD75005B6B52 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				716370811D24BD75005B6B52 /* 首页 */,
+				716370791D24BD75005B6B52 /* 发现 */,
+				7163707B1D24BD75005B6B52 /* 我 */,
+				7163707D1D24BD75005B6B52 /* 朋友圈 */,
+				7163707F1D24BD75005B6B52 /* 电子书 */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		716370791D24BD75005B6B52 /* 发现 */ = {
+			isa = PBXGroup;
+			children = (
+				7163707A1D24BD75005B6B52 /* SCFindViewController.swift */,
+			);
+			path = "发现";
+			sourceTree = "<group>";
+		};
+		7163707B1D24BD75005B6B52 /* 我 */ = {
+			isa = PBXGroup;
+			children = (
+				7163707C1D24BD75005B6B52 /* SCMyCenterViewController.swift */,
+			);
+			path = "我";
+			sourceTree = "<group>";
+		};
+		7163707D1D24BD75005B6B52 /* 朋友圈 */ = {
+			isa = PBXGroup;
+			children = (
+				7163707E1D24BD75005B6B52 /* SCFriendViewController.swift */,
+			);
+			path = "朋友圈";
+			sourceTree = "<group>";
+		};
+		7163707F1D24BD75005B6B52 /* 电子书 */ = {
+			isa = PBXGroup;
+			children = (
+				716370801D24BD75005B6B52 /* SCE_BookViewController.swift */,
+			);
+			path = "电子书";
+			sourceTree = "<group>";
+		};
+		716370811D24BD75005B6B52 /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				716370821D24BD75005B6B52 /* SCHomeViewController.swift */,
+				716370831D24BD75005B6B52 /* SCKllViewController.swift */,
+				716370841D24BD75005B6B52 /* SCLkkViewController.swift */,
+			);
+			path = "首页";
+			sourceTree = "<group>";
+		};
+		716370851D24BD75005B6B52 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				712BBA901D260C4100E388E5 /* 电子书 */,
+				712BBA871D26053000E388E5 /* 发现 */,
+				716370861D24BD75005B6B52 /* 我 */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		716370861D24BD75005B6B52 /* 我 */ = {
+			isa = PBXGroup;
+			children = (
+				716370871D24BD75005B6B52 /* SCMyCenterModel.swift */,
+			);
+			path = "我";
+			sourceTree = "<group>";
+		};
+		716370881D24BD75005B6B52 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				712BBA961D2617BE00E388E5 /* 电子书 */,
+				712BBA8D1D26073700E388E5 /* 发现 */,
+				716370891D24BD75005B6B52 /* 我 */,
+				7163708B1D24BD75005B6B52 /* 首页 */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		716370891D24BD75005B6B52 /* 我 */ = {
+			isa = PBXGroup;
+			children = (
+				7163708A1D24BD75005B6B52 /* SCMyCenterCell.swift */,
+			);
+			path = "我";
+			sourceTree = "<group>";
+		};
+		7163708B1D24BD75005B6B52 /* 首页 */ = {
+			isa = PBXGroup;
+			children = (
+				7163708C1D24BD75005B6B52 /* SCButton.swift */,
+				7163708D1D24BD75005B6B52 /* SCHomeTitleView.swift */,
+			);
+			path = "首页";
+			sourceTree = "<group>";
+		};
+		7163708E1D24BD75005B6B52 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				712BBA931D26106F00E388E5 /* 电子书 */,
+				712BBA841D26048300E388E5 /* 发现 */,
+				7163708F1D24BD75005B6B52 /* 我 */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7163708F1D24BD75005B6B52 /* 我 */ = {
+			isa = PBXGroup;
+			children = (
+				716370901D24BD75005B6B52 /* SCMyCenterVM.swift */,
+			);
+			path = "我";
+			sourceTree = "<group>";
+		};
+		716370911D24BD75005B6B52 /* 公共 */ = {
+			isa = PBXGroup;
+			children = (
+				716370921D24BD75005B6B52 /* AppDelegate.swift */,
+				716370BD1D24BDA1005B6B52 /* Info.plist */,
+				716370931D24BD75005B6B52 /* Assets.xcassets */,
+				716370941D24BD75005B6B52 /* Images.xcassets */,
+				716370951D24BD75005B6B52 /* Public.swift */,
+				716370961D24BD75005B6B52 /* 圣才电子书-Bridging-Header.h */,
+			);
+			path = "公共";
+			sourceTree = "<group>";
+		};
+		716370971D24BD75005B6B52 /* 基类 */ = {
+			isa = PBXGroup;
+			children = (
+				716370981D24BD75005B6B52 /* BaseNavigationController.swift */,
+				716370991D24BD75005B6B52 /* SCBaseTabBarController.swift */,
+				7163709A1D24BD75005B6B52 /* SCBaseViewController.swift */,
+			);
+			path = "基类";
+			sourceTree = "<group>";
+		};
+		7163709B1D24BD75005B6B52 /* 工具 */ = {
+			isa = PBXGroup;
+			children = (
+				712BBA8A1D26060E00E388E5 /* 扩展 */,
+				7163709C1D24BD75005B6B52 /* HUD */,
+			);
+			path = "工具";
+			sourceTree = "<group>";
+		};
+		7163709C1D24BD75005B6B52 /* HUD */ = {
+			isa = PBXGroup;
+			children = (
+				7163709D1D24BD75005B6B52 /* UIViewController+MBProgressHUD.h */,
+				7163709E1D24BD75005B6B52 /* UIViewController+MBProgressHUD.m */,
+				7163709F1D24BD75005B6B52 /* YWSpritesLoadingView.h */,
+				716370A01D24BD75005B6B52 /* YWSpritesLoadingView.m */,
+			);
+			path = HUD;
+			sourceTree = "<group>";
+		};
+		716370A11D24BD75005B6B52 /* 第三方 */ = {
+			isa = PBXGroup;
+			children = (
+				716370A21D24BD75005B6B52 /* PanNavigationController */,
+			);
+			path = "第三方";
+			sourceTree = "<group>";
+		};
+		716370A21D24BD75005B6B52 /* PanNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				716370BF1D24BDF4005B6B52 /* LCPanGestureRecognizer.h */,
+				716370C01D24BDF4005B6B52 /* LCPanGestureRecognizer.m */,
+				716370C11D24BDF4005B6B52 /* LCPanNavigationController.h */,
+				716370C21D24BDF4005B6B52 /* LCPanNavigationController.m */,
+				716370C31D24BDF4005B6B52 /* UIView+Snapshot.h */,
+				716370C41D24BDF4005B6B52 /* UIView+Snapshot.m */,
+			);
+			path = PanNavigationController;
+			sourceTree = "<group>";
+		};
+		716370A51D24BD75005B6B52 /* 网络请求 */ = {
+			isa = PBXGroup;
+			children = (
+				716370A61D24BD75005B6B52 /* SCRequest.swift */,
+			);
+			path = "网络请求";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7131AD411D0E53240010EE23 /* SCDZS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7131AD6A1D0E53240010EE23 /* Build configuration list for PBXNativeTarget "SCDZS" */;
+			buildPhases = (
+				D1A8F10F1D3A634FD5E47DA6 /* Check Pods Manifest.lock */,
+				7131AD3E1D0E53240010EE23 /* Sources */,
+				7131AD3F1D0E53240010EE23 /* Frameworks */,
+				7131AD401D0E53240010EE23 /* Resources */,
+				9304829ADC7C00F7461CF86C /* Embed Pods Frameworks */,
+				9533345B145FD4835A208166 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SCDZS;
+			productName = "圣才电子书";
+			productReference = 7131AD421D0E53240010EE23 /* SCDZS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7131AD551D0E53240010EE23 /* SCDZSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7131AD6D1D0E53240010EE23 /* Build configuration list for PBXNativeTarget "SCDZSTests" */;
+			buildPhases = (
+				7131AD521D0E53240010EE23 /* Sources */,
+				7131AD531D0E53240010EE23 /* Frameworks */,
+				7131AD541D0E53240010EE23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7131AD581D0E53240010EE23 /* PBXTargetDependency */,
+			);
+			name = SCDZSTests;
+			productName = "圣才电子书Tests";
+			productReference = 7131AD561D0E53240010EE23 /* SCDZS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		7131AD601D0E53240010EE23 /* SCDZSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7131AD701D0E53240010EE23 /* Build configuration list for PBXNativeTarget "SCDZSUITests" */;
+			buildPhases = (
+				7131AD5D1D0E53240010EE23 /* Sources */,
+				7131AD5E1D0E53240010EE23 /* Frameworks */,
+				7131AD5F1D0E53240010EE23 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7131AD631D0E53240010EE23 /* PBXTargetDependency */,
+			);
+			name = SCDZSUITests;
+			productName = "圣才电子书UITests";
+			productReference = 7131AD611D0E53240010EE23 /* SCDZS.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7131AD3A1D0E53240010EE23 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = SC;
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "周磊";
+				TargetAttributes = {
+					7131AD411D0E53240010EE23 = {
+						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
+					};
+					7131AD551D0E53240010EE23 = {
+						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
+						TestTargetID = 7131AD411D0E53240010EE23;
+					};
+					7131AD601D0E53240010EE23 = {
+						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
+						TestTargetID = 7131AD411D0E53240010EE23;
+					};
+				};
+			};
+			buildConfigurationList = 7131AD3D1D0E53240010EE23 /* Build configuration list for PBXProject "SCDZS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7131AD391D0E53240010EE23;
+			productRefGroup = 7131AD431D0E53240010EE23 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7131AD411D0E53240010EE23 /* SCDZS */,
+				7131AD551D0E53240010EE23 /* SCDZSTests */,
+				7131AD601D0E53240010EE23 /* SCDZSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7131AD401D0E53240010EE23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				716370B41D24BD75005B6B52 /* Assets.xcassets in Resources */,
+				716370B51D24BD75005B6B52 /* Images.xcassets in Resources */,
+				716370BE1D24BDA1005B6B52 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7131AD541D0E53240010EE23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7131AD5F1D0E53240010EE23 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9304829ADC7C00F7461CF86C /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9533345B145FD4835A208166 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1A8F10F1D3A634FD5E47DA6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7131AD3E1D0E53240010EE23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				716370C61D24BDF4005B6B52 /* LCPanNavigationController.m in Sources */,
+				716370B21D24BD75005B6B52 /* SCMyCenterVM.swift in Sources */,
+				712BBA921D260C5900E388E5 /* SCE-BookModel.swift in Sources */,
+				712BBA951D26108200E388E5 /* SCE_BookVM.swift in Sources */,
+				716370A91D24BD75005B6B52 /* SCFriendViewController.swift in Sources */,
+				716370AB1D24BD75005B6B52 /* SCHomeViewController.swift in Sources */,
+				716370B91D24BD75005B6B52 /* SCBaseViewController.swift in Sources */,
+				716370AD1D24BD75005B6B52 /* SCLkkViewController.swift in Sources */,
+				716370B61D24BD75005B6B52 /* Public.swift in Sources */,
+				716370B01D24BD75005B6B52 /* SCButton.swift in Sources */,
+				716370BB1D24BD75005B6B52 /* YWSpritesLoadingView.m in Sources */,
+				716370C51D24BDF4005B6B52 /* LCPanGestureRecognizer.m in Sources */,
+				716370AF1D24BD75005B6B52 /* SCMyCenterCell.swift in Sources */,
+				712BBA861D26049900E388E5 /* SCFindVM.swift in Sources */,
+				716370B11D24BD75005B6B52 /* SCHomeTitleView.swift in Sources */,
+				712BBA9C1D263E9B00E388E5 /* SCE_BookCVCell.swift in Sources */,
+				712BBA9A1D263B6100E388E5 /* SCE_BookCV.swift in Sources */,
+				716370B81D24BD75005B6B52 /* SCBaseTabBarController.swift in Sources */,
+				716370B71D24BD75005B6B52 /* BaseNavigationController.swift in Sources */,
+				712BBA8C1D26062100E388E5 /* Extension+NSObject.swift in Sources */,
+				712BBA981D2617D500E388E5 /* SCE_BookTitleView.swift in Sources */,
+				716370AA1D24BD75005B6B52 /* SCE_BookViewController.swift in Sources */,
+				712BBA891D26054000E388E5 /* SCFindModel.swift in Sources */,
+				712BBA9E1D265AEA00E388E5 /* SCE_BookCVHeaderView.swift in Sources */,
+				716370BC1D24BD75005B6B52 /* SCRequest.swift in Sources */,
+				716370B31D24BD75005B6B52 /* AppDelegate.swift in Sources */,
+				716370A71D24BD75005B6B52 /* SCFindViewController.swift in Sources */,
+				716370BA1D24BD75005B6B52 /* UIViewController+MBProgressHUD.m in Sources */,
+				716370AC1D24BD75005B6B52 /* SCKllViewController.swift in Sources */,
+				716370AE1D24BD75005B6B52 /* SCMyCenterModel.swift in Sources */,
+				716370A81D24BD75005B6B52 /* SCMyCenterViewController.swift in Sources */,
+				716370C71D24BDF4005B6B52 /* UIView+Snapshot.m in Sources */,
+				712BBAA01D265DDF00E388E5 /* SCE_BookCVTopHV.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7131AD521D0E53240010EE23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7131AD5B1D0E53240010EE23 /* _____Tests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		7131AD5D1D0E53240010EE23 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7131AD661D0E53240010EE23 /* _____UITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7131AD581D0E53240010EE23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7131AD411D0E53240010EE23 /* SCDZS */;
+			targetProxy = 7131AD571D0E53240010EE23 /* PBXContainerItemProxy */;
+		};
+		7131AD631D0E53240010EE23 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7131AD411D0E53240010EE23 /* SCDZS */;
+			targetProxy = 7131AD621D0E53240010EE23 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		7131AD681D0E53240010EE23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7131AD691D0E53240010EE23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7131AD6B1D0E53240010EE23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 948CDC67646270F9C35C9EC5 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "圣才电子书/公共/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" -D DEBUG";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shengcai.-----";
+				PRODUCT_NAME = SCDZS;
+				SWIFT_OBJC_BRIDGING_HEADER = "圣才电子书/公共/圣才电子书-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/** ${SRCROOT}/**";
+			};
+			name = Debug;
+		};
+		7131AD6C1D0E53240010EE23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AF1BED6F817A44027DBE1A1D /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = "圣才电子书/公共/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shengcai.-----";
+				PRODUCT_NAME = SCDZS;
+				SWIFT_OBJC_BRIDGING_HEADER = "圣才电子书/公共/圣才电子书-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "$(PODS_ROOT)/** ${SRCROOT}/**";
+			};
+			name = Release;
+		};
+		7131AD6E1D0E53240010EE23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "圣才电子书Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shengcai.-----Tests";
+				PRODUCT_NAME = SCDZS;
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SCDZS.app/SCDZS";
+			};
+			name = Debug;
+		};
+		7131AD6F1D0E53240010EE23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "圣才电子书Tests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shengcai.-----Tests";
+				PRODUCT_NAME = SCDZS;
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SCDZS.app/SCDZS";
+			};
+			name = Release;
+		};
+		7131AD711D0E53240010EE23 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "圣才电子书UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shengcai.-----UITests";
+				PRODUCT_NAME = SCDZS;
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "圣才电子书";
+			};
+			name = Debug;
+		};
+		7131AD721D0E53240010EE23 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "圣才电子书UITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.shengcai.-----UITests";
+				PRODUCT_NAME = SCDZS;
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = "圣才电子书";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7131AD3D1D0E53240010EE23 /* Build configuration list for PBXProject "SCDZS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7131AD681D0E53240010EE23 /* Debug */,
+				7131AD691D0E53240010EE23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7131AD6A1D0E53240010EE23 /* Build configuration list for PBXNativeTarget "SCDZS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7131AD6B1D0E53240010EE23 /* Debug */,
+				7131AD6C1D0E53240010EE23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7131AD6D1D0E53240010EE23 /* Build configuration list for PBXNativeTarget "SCDZSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7131AD6E1D0E53240010EE23 /* Debug */,
+				7131AD6F1D0E53240010EE23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7131AD701D0E53240010EE23 /* Build configuration list for PBXNativeTarget "SCDZSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7131AD711D0E53240010EE23 /* Debug */,
+				7131AD721D0E53240010EE23 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7131AD3A1D0E53240010EE23 /* Project object */;
+}

@@ -1,0 +1,37 @@
+PODS:
+  - Alamofire (3.4.1)
+  - Kingfisher (2.4.1)
+  - MBProgressHUD (0.9.2)
+  - ReachabilitySwift (2.3.3)
+  - ReactiveCocoa (4.2.1):
+    - Result (~> 2.0)
+  - Result (2.1.1)
+  - RxSwift (2.5.0)
+  - SKPhotoBrowser (1.9.1)
+  - SnapKit (0.30.0.beta1)
+  - SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 3.4.0)
+  - Kingfisher (~> 2.4.1)
+  - MBProgressHUD (~> 0.9.2)
+  - ReachabilitySwift (~> 2.3.3)
+  - ReactiveCocoa (~> 4.2.1)
+  - RxSwift (~> 2.5.0)
+  - SKPhotoBrowser (~> 1.9.1)
+  - SnapKit (~> 0.30.0.beta1)
+  - SwiftyJSON (~> 2.3.2)
+
+SPEC CHECKSUMS:
+  Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  Kingfisher: 41aed5b6c1ed8fa98cf6d75283ce89cf7890f517
+  MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
+  ReachabilitySwift: e0f6b6f280effb47731acfaaa2d5ffe223703793
+  ReactiveCocoa: 5a42745f11ea236f405bb9ce5e97c5e3b23562dd
+  Result: 822c879f145943320cc80a9a8372378e3d699fe4
+  RxSwift: 402b41a50e922a0368fc14cb3bc9f4427920e8ae
+  SKPhotoBrowser: 45fad9ae67bdd24217d7808f91245c9b16fe3df9
+  SnapKit: 732e8cad7910a1cb812c5c1fb58f231d7a3b49e8
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
+COCOAPODS: 0.39.0
