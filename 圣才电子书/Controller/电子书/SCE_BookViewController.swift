@@ -32,6 +32,7 @@ class SCE_BookViewController: SCBaseViewController{
         e_bookTitleView.searchImageButton.rac_signalForControlEvents(UIControlEvents.TouchUpInside).subscribeNext { (value) in
             SCLog("点击了搜索按钮")
         }
+        
         //switchToLatest获取信号中的信号的最新的信号
         e_BookCV.CVSignal.switchToLatest().subscribeNext { (ClickSignal) in
             
