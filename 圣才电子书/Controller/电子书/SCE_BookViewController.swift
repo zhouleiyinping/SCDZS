@@ -52,13 +52,15 @@ class SCE_BookViewController: SCBaseViewController{
     func requestDataSouce() {
         
         weak var wself = self
-        
         // 发送请求
         let signal = self.e_BookRequest.requestCommand.execute(nil)
         signal.subscribeNext({ (dataArray) in
             
-            wself!.e_BookCV.e_BookModelArray = (dataArray as? [SCE_BookModel])!
+            wself!.e_BookCV.e_BookModelArray = (dataArray[0] as? [SCE_BookModel])!
             
+            wself!.e_BookCV.totalNumMode = (dataArray[1] as? SCE_BookTotalNumMode)!
+            
+
             }, error: { (error) in
                 wself?.showErrorHUDWithMessage("哎呀，出错了")
         }) {
@@ -68,7 +70,6 @@ class SCE_BookViewController: SCBaseViewController{
     }
     
     
-     
     // MARK: - SCE_BookVM
     lazy var e_BookRequest:SCE_BookVM = {
         let e_BookRequest = SCE_BookVM()

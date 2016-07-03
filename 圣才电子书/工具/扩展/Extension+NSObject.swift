@@ -6,6 +6,7 @@
 //  Copyright © 2016年 周磊. All rights reserved.
 //
 
+
 import UIKit
 
 extension NSObject{
@@ -32,15 +33,13 @@ extension NSObject{
                 }else {
                     return false
                 }
-                
             }
+            
             //字典的key和属性一样才能赋值
             if isContains {
-                //因为model的所以属性都是string类型，所以这里做判断，都转成String类型
+                //一般来说json模型里的所有对象的属性不是String就是Number
                 let  keyValuesString = keyValues[key]
-//                if !(keyValuesString is String){
-//                    keyValuesString = String(keyValuesString)
-//                }
+                
                 if let value = keyValuesString{
                     //为model类赋值
                     model.setValue(value, forKey: key as String)

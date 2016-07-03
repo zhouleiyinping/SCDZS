@@ -11,6 +11,8 @@ import UIKit
 class SCE_BookCV: UIView {
     
     var lastIndex:NSIndexPath?
+    
+    
     //数据源
     var e_BookModelArray:[SCE_BookModel] = [] {
         didSet {
@@ -35,6 +37,10 @@ class SCE_BookCV: UIView {
         return CVSignal
     }()
     
+    lazy var totalNumMode:SCE_BookTotalNumMode = {
+        var totalNumMode = SCE_BookTotalNumMode()
+        return totalNumMode
+    }()
     
 
     // MARK: - collectionView
@@ -121,9 +127,9 @@ extension SCE_BookCV:UICollectionViewDataSource,UICollectionViewDelegate,UIColle
             
              let headerView = collectionView.dequeueReusableSupplementaryViewOfKind(kind, withReuseIdentifier: "SCE_BookCVTopHV", forIndexPath: indexPath) as! SCE_BookCVTopHV
             
+            headerView.totalNumMode = totalNumMode
             
             self.CVSignal.sendNext(headerView.e_BookButton.rac_signalForControlEvents(UIControlEvents.TouchUpInside))
-            
             
             if kind == UICollectionElementKindSectionHeader {
                 

@@ -8,43 +8,19 @@
 
 import UIKit
 
-//扫一扫
-typealias homeRichScanBlock = () -> ()
-//学友群
-typealias homeSchoolmateBlock = () -> ()
-//语音
-typealias homeSearchBoxVoiceBlock = () -> ()
 
 class SCHomeTitleView: UIView {
 
-    /// 扫一扫
-    var richScanBlock : homeRichScanBlock?
-    /// 学友群
-    var schoolmateBlock : homeSchoolmateBlock?
-    /// 语音
-    var searchBoxVoiceBlock : homeSearchBoxVoiceBlock?
-
-    // MARK: - 首页顶栏扫一扫
+       // MARK: - 首页顶栏扫一扫
     lazy var homeRichScan:SCButton = {
         
         let homeRichScan = SCButton.init(type: UIButtonType.Custom)
         homeRichScan.setTitle("扫一扫", forState: UIControlState.Normal)
         homeRichScan.setTitleColor(RGB(213, g: 213, b: 213), forState: UIControlState.Normal)
         homeRichScan.setImage(SCIMAGE("首页顶栏扫一扫"), forState: UIControlState.Normal)
-        homeRichScan.addTarget(self, action: #selector(SCHomeTitleView.clickHomeRichScan), forControlEvents: UIControlEvents.TouchUpInside)
         return homeRichScan
     }()
-    
-    // MARK: - 点击首页顶栏扫一扫
-    func clickHomeRichScan() {
-        
-        if self.richScanBlock != nil {
-            
-            self.richScanBlock!()
-        }
-        
-    }
-    
+  
     // MARK: - 首页顶部学友群
     lazy var homeSchoolmate:SCButton = {
         
@@ -52,18 +28,9 @@ class SCHomeTitleView: UIView {
         homeSchoolmate.setTitle("学友群", forState: UIControlState.Normal)
         homeSchoolmate.setTitleColor(RGB(213, g: 213, b: 213), forState: UIControlState.Normal)
         homeSchoolmate.setImage(SCIMAGE("首页顶部学友群图标"), forState: UIControlState.Normal)
-        homeSchoolmate.addTarget(self, action: #selector(SCHomeTitleView.clickHomeSchoolmate), forControlEvents: UIControlEvents.TouchUpInside)
         return homeSchoolmate
     }()
     
-    
-    // MARK: - 点击首页顶部学友群
-    func clickHomeSchoolmate() {
-        
-        if self.schoolmateBlock != nil {
-            self.schoolmateBlock!()
-        }
-    }
     
     // MARK: - 首页顶部搜索框
     lazy var homeSearchBox:UIImageView = {
@@ -84,19 +51,8 @@ class SCHomeTitleView: UIView {
     lazy var homeSearchBoxVoice:UIButton = {
         let homeSearchBoxVoice = UIButton.init(type: UIButtonType.Custom)
         homeSearchBoxVoice.setImage(SCIMAGE("001_1voice_03"), forState: UIControlState.Normal)
-        homeSearchBoxVoice.addTarget(self, action: #selector(SCHomeTitleView.clickHomeSearchBoxVoice), forControlEvents: UIControlEvents.TouchUpInside)
         return homeSearchBoxVoice
     }()
-    // MARK: - 点击首页顶部搜索框录音按钮
-    func clickHomeSearchBoxVoice() {
-        
-        SCLog("点击了语音")
-
-        if self.searchBoxVoiceBlock != nil {
-            self.searchBoxVoiceBlock!()
-        }
-    }
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -147,22 +103,5 @@ class SCHomeTitleView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    //扫一扫闭包变量的Seter方法
-    func setrichScanBlock(tempClosure:homeRichScanBlock) {
-        
-        self.richScanBlock = tempClosure
-    }
-    
-    //学友群闭包变量的Seter方法
-    func setschoolmateBlock(tempClosure:homeSchoolmateBlock) {
-        
-        self.schoolmateBlock = tempClosure
-    }
- 
-    //语音闭包变量的Seter方法
-    func setsearchBoxVoiceBlock(tempClosure:homeSearchBoxVoiceBlock) {
-        
-        self.searchBoxVoiceBlock = tempClosure
-    }
-
+   
 }

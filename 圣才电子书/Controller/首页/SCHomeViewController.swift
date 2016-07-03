@@ -15,24 +15,8 @@ class SCHomeViewController: SCBaseViewController {
         
         let homeTitleView = SCHomeTitleView.init()
         homeTitleView.backgroundColor = UIColor.whiteColor()
-        
-        homeTitleView.setrichScanBlock {
-            SCLog("点击了扫一扫")
-            
-            self.navigationController?.pushViewController(SCLkkViewController(), animated: true)
-            
-        }
-        homeTitleView.setschoolmateBlock {
-            SCLog("点击了学友群")
-        }
-        homeTitleView.setsearchBoxVoiceBlock {
-            SCLog("点击了语音")
-        }
-        return homeTitleView
+          return homeTitleView
     }()
-    
-    
-   
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +32,18 @@ class SCHomeViewController: SCBaseViewController {
             
         }
         
+        homeTitleView.homeRichScan.rac_signalForControlEvents(UIControlEvents.TouchUpInside).subscribeNext { (value) in
+            SCLog("点击了扫一扫")
+            self.navigationController?.pushViewController(SCLkkViewController(), animated: true)
+        }
         
+        homeTitleView.homeSchoolmate.rac_signalForControlEvents(UIControlEvents.TouchUpInside).subscribeNext { (value) in
+            SCLog("点击了学友群")
+        }
+
+        homeTitleView.homeSearchBoxVoice.rac_signalForControlEvents(UIControlEvents.TouchUpInside).subscribeNext { (value) in
+           SCLog("点击了语音")
+        }
         
     }
     

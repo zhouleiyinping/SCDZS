@@ -9,6 +9,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>HMSegmentedControl.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Kingfisher.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -62,17 +67,37 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0127D98D3C80CC0EE629590233323F70</key>
+		<key>00867C706C096BDF6B5012FDBFEF9D2C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2E04DD1B79AEAD6B4A2CFC9F416D501C</key>
+		<key>0D5F307F720F4B373642AC74CF465CFA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>5FD9BA7224B96808329EE3E09D1A7EF6</key>
+		<key>382E9178BB7DB282730F91A702E209FC</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>44AB49D4B915A9A68E683D6F9CC607EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5C14F800DDD60A548B56A220D78073DD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>71C1DF39EE1271EA1147F993CA1439A0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>75897BF8190193C0CD05B6D0839AF4A4</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,27 +107,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>7F69D26A067519D8AC531E4CE8E273F3</key>
+		<key>9A588D81451F5318D092DD65BF2BD7EF</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>8109DB2E4602EA48CD17050DF66847E7</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>91423E859278B171847D5E54F96745CE</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9468FB2C528986F96097066FD2DB641C</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>E502503BAD3F5AEA8191332CCED06C6E</key>
+		<key>BACEA3A5897B042CD0A925139F3D5CC1</key>
 		<dict>
 			<key>primary</key>
 			<true/>

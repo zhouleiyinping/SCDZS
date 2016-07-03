@@ -32,6 +32,6 @@ class SCE_BookTotalNumMode: NSObject {
     
     var ebookCT:NSNumber?
     var tkCT:NSNumber?
-    var videoCT:String?
+    var videoCT:NSNumber?
   
 }

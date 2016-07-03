@@ -6,3 +6,4 @@
 #import "MBProgressHUD.h"
 #import "UIViewController+MBProgressHUD.h"
 #import "ReactiveCocoa.h"
+#import "HMSegmentedControl.h"

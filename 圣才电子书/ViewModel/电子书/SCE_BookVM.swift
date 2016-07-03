@@ -22,8 +22,45 @@ class SCE_BookVM: NSObject {
     func initialBind(){
         
         
-        
         requestCommand = RACCommand.init(signalBlock: { (input) -> RACSignal! in
+            
+            
+            let numberSignal = RACSignal.createSignal({ (subscriber) -> RACDisposable! in
+                
+                //发送get请求
+                request.defaultInstance().GetRequest(e_bookNumberUrl).responseJSON { (response) in
+                    
+                    switch response.result  {
+                    case .Success:
+                        
+                        /// 获取的数据是字典
+                        guard let JsonData = response.result.value as? NSDictionary else { return }
+                        
+                        /// 数组里都是字典
+                        let totalNum = JsonData["totalNum"] as? NSDictionary
+                        
+                        let e_BookTotalNumMode = SCE_BookTotalNumMode.objectWithKeyValues(totalNum!) as? SCE_BookTotalNumMode
+                        
+                        /**
+                         *  把最终的模型数组发送出去
+                         */
+                        subscriber.sendNext(e_BookTotalNumMode)
+                        /**
+                         *  数据发送完成
+                         */
+                        subscriber.sendCompleted()
+                        
+                    case .Failure(let error):
+                        
+                        /**
+                         *  发送错误的信息
+                         */
+                        subscriber.sendError(error)
+                    }
+                }
+                return nil
+            })
+            
             
             // 执行命令
             // 发送请求
@@ -83,7 +120,7 @@ class SCE_BookVM: NSObject {
                 }
                 return nil
             })
-            return signal
+            return signal.zipWith(numberSignal)
             
         })
         

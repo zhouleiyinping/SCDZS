@@ -10,12 +10,23 @@ import UIKit
 
 class SCE_BookCVTopHV: UICollectionReusableView {
     
-    let totalNumMode = SCE_BookTotalNumMode()
+    //数据源
+    var totalNumMode:SCE_BookTotalNumMode = SCE_BookTotalNumMode() {
+        didSet {
 
+            let ebookCTStr = String(totalNumMode.ebookCT!)
+            let videoCTStr = String(totalNumMode.videoCT!)
+            let tkCTStr = String(totalNumMode.tkCT!)
+            let attributedStr = NSMutableAttributedString.init(string: "共\(ebookCTStr)种电子书，\(videoCTStr)种视频，\(tkCTStr)种题库")
+            attributedStr.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range: NSMakeRange(1, 5))
+            attributedStr.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range: NSMakeRange(11, 5))
+            attributedStr.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range: NSMakeRange(20, 4))
+            numberBooksLabel.attributedText = attributedStr
+        }
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
         
         let topView = UIView()
         topView.backgroundColor = UIColor.whiteColor()
@@ -93,13 +104,6 @@ class SCE_BookCVTopHV: UICollectionReusableView {
         numberBooksLabel.font = SCFont(15)
         numberBooksLabel.textColor = UIColor.blackColor()
         numberBooksLabel.textAlignment  = NSTextAlignment.Center
-        
-        var attributedStr = NSMutableAttributedString.init(string: "共57040种电子书，19418种视频，2592种题库")
-        attributedStr.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range: NSMakeRange(1, 5))
-        attributedStr.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range: NSMakeRange(11, 5))
-        attributedStr.addAttribute(NSForegroundColorAttributeName, value: UIColor.redColor(), range: NSMakeRange(20, 4))
-        numberBooksLabel.attributedText = attributedStr
-
         return numberBooksLabel
     }()
     
