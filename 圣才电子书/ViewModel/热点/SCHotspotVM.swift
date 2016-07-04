@@ -20,6 +20,7 @@ class SCHotspotVM: NSObject {
     
     func initialBind() {
         
+        //获取所有类型的数据
         requestCommand = RACCommand.init(signalBlock: { (input) -> RACSignal! in
             
             let signal = RACSignal.createSignal({ (subscriber) -> RACDisposable! in

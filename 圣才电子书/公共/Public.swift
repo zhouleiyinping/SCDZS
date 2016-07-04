@@ -89,6 +89,7 @@ public let ScreenHeight: CGFloat = UIScreen.mainScreen().bounds.size.height
 public let ScreenBounds: CGRect = UIScreen.mainScreen().bounds
 public let BgColor:UIColor = RGB(240, g: 239, b: 245)
 
+public let placeholderImage = UIImage.init(named: "pai_pai_pai")
 
 // MARK: - requestUrl
 //我

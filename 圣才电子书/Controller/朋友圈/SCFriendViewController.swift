@@ -18,13 +18,14 @@ class SCFriendViewController: SCBaseViewController,UIScrollViewDelegate {
     lazy var mainScrollView:UIScrollView = {
         
        var  mainScrollView = UIScrollView();
+        mainScrollView.contentSize = CGSizeMake((ScreenWidth * CGFloat(Float(self.hotspotModelArray.count))), ScreenHeight-64-45-50);
         mainScrollView.pagingEnabled = true
         mainScrollView.bounces = false
         mainScrollView.showsHorizontalScrollIndicator = true
         mainScrollView.directionalLockEnabled = true
         mainScrollView.delegate = self
         mainScrollView.contentOffset = CGPointMake(0, 0)
-        mainScrollView.backgroundColor = UIColor.cyanColor()
+        mainScrollView.backgroundColor = UIColor.whiteColor()
         return mainScrollView
     }()
     
@@ -69,7 +70,6 @@ class SCFriendViewController: SCBaseViewController,UIScrollViewDelegate {
 
         self.view.backgroundColor = BgColor
         
-        self.showHUD()
         requestDataSouce()
         
     }
@@ -113,17 +113,15 @@ class SCFriendViewController: SCBaseViewController,UIScrollViewDelegate {
         signal.subscribeNext({ (dataArray) in
             
             wself!.hotspotModelArray = (dataArray as? [allCategory])!
+            
             for i in 0..<wself!.hotspotModelArray.count {
                 let allCategory = wself!.hotspotModelArray[i]
                 wself!.hotspotCategoryArray.append(allCategory.Name!)
             }
-            
-            wself!.setSubviews()
-            
             }, error: { (error) in
                 wself?.showErrorHUDWithMessage("哎呀，出错了")
         }) {
-            wself?.hideHUD()
+            wself!.setSubviews()
         }
         
     }
@@ -131,14 +129,15 @@ class SCFriendViewController: SCBaseViewController,UIScrollViewDelegate {
     
     func addViewControllers() {
         
-        for _ in 0 ..< hotspotModelArray.count {
+        for i in 0 ..< hotspotModelArray.count {
             
-            let rankingView = SCMyCenterViewController()
-            
+            let allCategory = self.hotspotModelArray[i]
+            let rankingView = SCHotspotTableViewController()
+            rankingView.categroyId = String(allCategory.Id!)
             self.addChildViewController(rankingView)
         }
         /// 添加默认控制器
-        let rankingVC:SCMyCenterViewController = (self.childViewControllers[0] as! SCMyCenterViewController)
+        let rankingVC:SCHotspotTableViewController = (self.childViewControllers[0] as! SCHotspotTableViewController)
         rankingVC.view.frame = mainScrollView.bounds;
         mainScrollView.addSubview(rankingVC.view)
     }
@@ -164,7 +163,7 @@ class SCFriendViewController: SCBaseViewController,UIScrollViewDelegate {
 
     func addControllersWhenSlider(index:Int) {
         
-        let rankingView:SCMyCenterViewController = (self.childViewControllers[index] as! SCMyCenterViewController)
+        let rankingView:SCHotspotTableViewController = (self.childViewControllers[index] as! SCHotspotTableViewController)
         rankingView.view.frame = mainScrollView.bounds
         mainScrollView.addSubview(rankingView.view)
         

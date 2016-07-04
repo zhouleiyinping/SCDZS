@@ -31,6 +31,7 @@ class SCE_BookViewController: SCBaseViewController{
         
         e_bookTitleView.searchImageButton.rac_signalForControlEvents(UIControlEvents.TouchUpInside).subscribeNext { (value) in
             SCLog("点击了搜索按钮")
+            
         }
         
         //switchToLatest获取信号中的信号的最新的信号
@@ -39,8 +40,6 @@ class SCE_BookViewController: SCBaseViewController{
             SCLog("点击了查看我的电子书")
 
         }
-        
-        
                
         self.showHUD()
         requestDataSouce()
@@ -56,11 +55,11 @@ class SCE_BookViewController: SCBaseViewController{
         let signal = self.e_BookRequest.requestCommand.execute(nil)
         signal.subscribeNext({ (dataArray) in
             
-            wself!.e_BookCV.e_BookModelArray = (dataArray[0] as? [SCE_BookModel])!
+            //强转成RACTuple，不然真机上会报ambiguous use of subscript错误，但是模拟机上不会，不知道什么原因。。。。。。
+            let dataTuples = dataArray as! RACTuple
+            wself!.e_BookCV.e_BookModelArray = (dataTuples[0] as? [SCE_BookModel])!
+            wself!.e_BookCV.totalNumMode = (dataTuples[1] as? SCE_BookTotalNumMode)!
             
-            wself!.e_BookCV.totalNumMode = (dataArray[1] as? SCE_BookTotalNumMode)!
-            
-
             }, error: { (error) in
                 wself?.showErrorHUDWithMessage("哎呀，出错了")
         }) {
@@ -68,7 +67,6 @@ class SCE_BookViewController: SCBaseViewController{
         }
         
     }
-    
     
     // MARK: - SCE_BookVM
     lazy var e_BookRequest:SCE_BookVM = {

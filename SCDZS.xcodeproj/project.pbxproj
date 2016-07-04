@@ -46,6 +46,13 @@
 		716370C51D24BDF4005B6B52 /* LCPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 716370C01D24BDF4005B6B52 /* LCPanGestureRecognizer.m */; };
 		716370C61D24BDF4005B6B52 /* LCPanNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 716370C21D24BDF4005B6B52 /* LCPanNavigationController.m */; };
 		716370C71D24BDF4005B6B52 /* UIView+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 716370C41D24BDF4005B6B52 /* UIView+Snapshot.m */; };
+		71B3A5191D29EFD9001CE11C /* SCHotspotTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3A5181D29EFD9001CE11C /* SCHotspotTableViewController.swift */; };
+		71B3A51D1D29F115001CE11C /* SCHotspotImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3A51C1D29F115001CE11C /* SCHotspotImageCell.swift */; };
+		71B3A51F1D29F5BB001CE11C /* SCHotspotGraphicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3A51E1D29F5BB001CE11C /* SCHotspotGraphicCell.swift */; };
+		71B3A5211D29F5FB001CE11C /* SCHotspotBaseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3A5201D29F5FB001CE11C /* SCHotspotBaseCell.swift */; };
+		71B3A5231D29F759001CE11C /* SCHotspotLinkingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3A5221D29F759001CE11C /* SCHotspotLinkingCell.swift */; };
+		71B3A5251D29F8C1001CE11C /* SCHotspotTableViewVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3A5241D29F8C1001CE11C /* SCHotspotTableViewVM.swift */; };
+		71B3A5271D2A140B001CE11C /* SCHotspotHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3A5261D2A140B001CE11C /* SCHotspotHeaderView.swift */; };
 		71FF59BD1D28E212009F5A74 /* SCHotspotVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FF59BC1D28E212009F5A74 /* SCHotspotVM.swift */; };
 		71FF59C01D28E276009F5A74 /* SCHotspotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FF59BF1D28E276009F5A74 /* SCHotspotModel.swift */; };
 /* End PBXBuildFile section */
@@ -117,6 +124,13 @@
 		716370C21D24BDF4005B6B52 /* LCPanNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCPanNavigationController.m; sourceTree = "<group>"; };
 		716370C31D24BDF4005B6B52 /* UIView+Snapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Snapshot.h"; sourceTree = "<group>"; };
 		716370C41D24BDF4005B6B52 /* UIView+Snapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Snapshot.m"; sourceTree = "<group>"; };
+		71B3A5181D29EFD9001CE11C /* SCHotspotTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCHotspotTableViewController.swift; sourceTree = "<group>"; };
+		71B3A51C1D29F115001CE11C /* SCHotspotImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCHotspotImageCell.swift; sourceTree = "<group>"; };
+		71B3A51E1D29F5BB001CE11C /* SCHotspotGraphicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCHotspotGraphicCell.swift; sourceTree = "<group>"; };
+		71B3A5201D29F5FB001CE11C /* SCHotspotBaseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCHotspotBaseCell.swift; sourceTree = "<group>"; };
+		71B3A5221D29F759001CE11C /* SCHotspotLinkingCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCHotspotLinkingCell.swift; sourceTree = "<group>"; };
+		71B3A5241D29F8C1001CE11C /* SCHotspotTableViewVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCHotspotTableViewVM.swift; sourceTree = "<group>"; };
+		71B3A5261D2A140B001CE11C /* SCHotspotHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCHotspotHeaderView.swift; sourceTree = "<group>"; };
 		71FF59BC1D28E212009F5A74 /* SCHotspotVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCHotspotVM.swift; sourceTree = "<group>"; };
 		71FF59BF1D28E276009F5A74 /* SCHotspotModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCHotspotModel.swift; sourceTree = "<group>"; };
 		8133E75B154981E472B8FEFF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -314,6 +328,7 @@
 			isa = PBXGroup;
 			children = (
 				7163707E1D24BD75005B6B52 /* SCFriendViewController.swift */,
+				71B3A5181D29EFD9001CE11C /* SCHotspotTableViewController.swift */,
 			);
 			path = "朋友圈";
 			sourceTree = "<group>";
@@ -358,6 +373,7 @@
 		716370881D24BD75005B6B52 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				71B3A51B1D29F08C001CE11C /* 热点or朋友圈 */,
 				712BBA961D2617BE00E388E5 /* 电子书 */,
 				712BBA8D1D26073700E388E5 /* 发现 */,
 				716370891D24BD75005B6B52 /* 我 */,
@@ -474,10 +490,23 @@
 			path = "网络请求";
 			sourceTree = "<group>";
 		};
+		71B3A51B1D29F08C001CE11C /* 热点or朋友圈 */ = {
+			isa = PBXGroup;
+			children = (
+				71B3A51C1D29F115001CE11C /* SCHotspotImageCell.swift */,
+				71B3A51E1D29F5BB001CE11C /* SCHotspotGraphicCell.swift */,
+				71B3A5201D29F5FB001CE11C /* SCHotspotBaseCell.swift */,
+				71B3A5221D29F759001CE11C /* SCHotspotLinkingCell.swift */,
+				71B3A5261D2A140B001CE11C /* SCHotspotHeaderView.swift */,
+			);
+			path = "热点or朋友圈";
+			sourceTree = "<group>";
+		};
 		71FF59BB1D28E1E5009F5A74 /* 热点 */ = {
 			isa = PBXGroup;
 			children = (
 				71FF59BC1D28E212009F5A74 /* SCHotspotVM.swift */,
+				71B3A5241D29F8C1001CE11C /* SCHotspotTableViewVM.swift */,
 			);
 			path = "热点";
 			sourceTree = "<group>";
@@ -687,6 +716,7 @@
 				716370AD1D24BD75005B6B52 /* SCLkkViewController.swift in Sources */,
 				716370B61D24BD75005B6B52 /* Public.swift in Sources */,
 				716370B01D24BD75005B6B52 /* SCButton.swift in Sources */,
+				71B3A5191D29EFD9001CE11C /* SCHotspotTableViewController.swift in Sources */,
 				716370BB1D24BD75005B6B52 /* YWSpritesLoadingView.m in Sources */,
 				716370C51D24BDF4005B6B52 /* LCPanGestureRecognizer.m in Sources */,
 				716370AF1D24BD75005B6B52 /* SCMyCenterCell.swift in Sources */,
@@ -698,14 +728,20 @@
 				716370B81D24BD75005B6B52 /* SCBaseTabBarController.swift in Sources */,
 				716370B71D24BD75005B6B52 /* BaseNavigationController.swift in Sources */,
 				712BBA8C1D26062100E388E5 /* Extension+NSObject.swift in Sources */,
+				71B3A5271D2A140B001CE11C /* SCHotspotHeaderView.swift in Sources */,
 				712BBA981D2617D500E388E5 /* SCE_BookTitleView.swift in Sources */,
+				71B3A5231D29F759001CE11C /* SCHotspotLinkingCell.swift in Sources */,
 				716370AA1D24BD75005B6B52 /* SCE_BookViewController.swift in Sources */,
 				712BBA891D26054000E388E5 /* SCFindModel.swift in Sources */,
 				712BBA9E1D265AEA00E388E5 /* SCE_BookCVHeaderView.swift in Sources */,
 				716370BC1D24BD75005B6B52 /* SCRequest.swift in Sources */,
+				71B3A51F1D29F5BB001CE11C /* SCHotspotGraphicCell.swift in Sources */,
 				716370B31D24BD75005B6B52 /* AppDelegate.swift in Sources */,
+				71B3A51D1D29F115001CE11C /* SCHotspotImageCell.swift in Sources */,
 				716370A71D24BD75005B6B52 /* SCFindViewController.swift in Sources */,
 				716370BA1D24BD75005B6B52 /* UIViewController+MBProgressHUD.m in Sources */,
+				71B3A5251D29F8C1001CE11C /* SCHotspotTableViewVM.swift in Sources */,
+				71B3A5211D29F5FB001CE11C /* SCHotspotBaseCell.swift in Sources */,
 				716370AC1D24BD75005B6B52 /* SCKllViewController.swift in Sources */,
 				716370AE1D24BD75005B6B52 /* SCMyCenterModel.swift in Sources */,
 				716370A81D24BD75005B6B52 /* SCMyCenterViewController.swift in Sources */,
