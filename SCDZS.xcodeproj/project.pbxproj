@@ -46,6 +46,7 @@
 		716370C51D24BDF4005B6B52 /* LCPanGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 716370C01D24BDF4005B6B52 /* LCPanGestureRecognizer.m */; };
 		716370C61D24BDF4005B6B52 /* LCPanNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 716370C21D24BDF4005B6B52 /* LCPanNavigationController.m */; };
 		716370C71D24BDF4005B6B52 /* UIView+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 716370C41D24BDF4005B6B52 /* UIView+Snapshot.m */; };
+		71B15FFA1D2BB0C9003DBCE2 /* SCWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B15FF91D2BB0C9003DBCE2 /* SCWebViewController.swift */; };
 		71B3A5191D29EFD9001CE11C /* SCHotspotTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3A5181D29EFD9001CE11C /* SCHotspotTableViewController.swift */; };
 		71B3A51D1D29F115001CE11C /* SCHotspotImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3A51C1D29F115001CE11C /* SCHotspotImageCell.swift */; };
 		71B3A51F1D29F5BB001CE11C /* SCHotspotGraphicCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B3A51E1D29F5BB001CE11C /* SCHotspotGraphicCell.swift */; };
@@ -124,6 +125,7 @@
 		716370C21D24BDF4005B6B52 /* LCPanNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LCPanNavigationController.m; sourceTree = "<group>"; };
 		716370C31D24BDF4005B6B52 /* UIView+Snapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Snapshot.h"; sourceTree = "<group>"; };
 		716370C41D24BDF4005B6B52 /* UIView+Snapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Snapshot.m"; sourceTree = "<group>"; };
+		71B15FF91D2BB0C9003DBCE2 /* SCWebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCWebViewController.swift; sourceTree = "<group>"; };
 		71B3A5181D29EFD9001CE11C /* SCHotspotTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCHotspotTableViewController.swift; sourceTree = "<group>"; };
 		71B3A51C1D29F115001CE11C /* SCHotspotImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCHotspotImageCell.swift; sourceTree = "<group>"; };
 		71B3A51E1D29F5BB001CE11C /* SCHotspotGraphicCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCHotspotGraphicCell.swift; sourceTree = "<group>"; };
@@ -299,6 +301,7 @@
 		716370781D24BD75005B6B52 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				71B15FF81D2BB0A2003DBCE2 /* webView */,
 				716370811D24BD75005B6B52 /* 首页 */,
 				716370791D24BD75005B6B52 /* 发现 */,
 				7163707B1D24BD75005B6B52 /* 我 */,
@@ -488,6 +491,14 @@
 				716370A61D24BD75005B6B52 /* SCRequest.swift */,
 			);
 			path = "网络请求";
+			sourceTree = "<group>";
+		};
+		71B15FF81D2BB0A2003DBCE2 /* webView */ = {
+			isa = PBXGroup;
+			children = (
+				71B15FF91D2BB0C9003DBCE2 /* SCWebViewController.swift */,
+			);
+			path = webView;
 			sourceTree = "<group>";
 		};
 		71B3A51B1D29F08C001CE11C /* 热点or朋友圈 */ = {
@@ -716,6 +727,7 @@
 				716370AD1D24BD75005B6B52 /* SCLkkViewController.swift in Sources */,
 				716370B61D24BD75005B6B52 /* Public.swift in Sources */,
 				716370B01D24BD75005B6B52 /* SCButton.swift in Sources */,
+				71B15FFA1D2BB0C9003DBCE2 /* SCWebViewController.swift in Sources */,
 				71B3A5191D29EFD9001CE11C /* SCHotspotTableViewController.swift in Sources */,
 				716370BB1D24BD75005B6B52 /* YWSpritesLoadingView.m in Sources */,
 				716370C51D24BDF4005B6B52 /* LCPanGestureRecognizer.m in Sources */,

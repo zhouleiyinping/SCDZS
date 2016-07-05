@@ -21,7 +21,8 @@ class SCFriendViewController: SCBaseViewController,UIScrollViewDelegate {
         mainScrollView.contentSize = CGSizeMake((ScreenWidth * CGFloat(Float(self.hotspotModelArray.count))), ScreenHeight-64-45-50);
         mainScrollView.pagingEnabled = true
         mainScrollView.bounces = false
-        mainScrollView.showsHorizontalScrollIndicator = true
+        mainScrollView.showsHorizontalScrollIndicator = false
+        mainScrollView.showsVerticalScrollIndicator = false
         mainScrollView.directionalLockEnabled = true
         mainScrollView.delegate = self
         mainScrollView.contentOffset = CGPointMake(0, 0)
@@ -69,7 +70,10 @@ class SCFriendViewController: SCBaseViewController,UIScrollViewDelegate {
         super.viewDidLoad()
 
         self.view.backgroundColor = BgColor
-        
+        self.backBtn.hidden = true
+        self.homeBtn.hidden = true
+        self.searchBtn.hidden = true
+        self.titleLabel.text = "热点"
         requestDataSouce()
         
     }
@@ -89,19 +93,18 @@ class SCFriendViewController: SCBaseViewController,UIScrollViewDelegate {
             make.bottom.equalTo(self.view).offset(-50)
         }
         
-//        let lineView = UIView()
-//        lineView.backgroundColor = UIColor.blackColor()
-//        self.view.addSubview(lineView)
-//        lineView.bringSubviewToFront(segmentedControl)
-//        lineView.snp.makeConstraints { (make) in
-//            make.left.right.equalTo(self.view).offset(0)
-//            make.top.equalTo(self.view).offset(104)
-//            make.height.equalTo(1)
-//        }
-//
+        let lineView = UIView()
+        lineView.backgroundColor = UIColor.blackColor()
+        self.view.addSubview(lineView)
+        lineView.bringSubviewToFront(segmentedControl)
+        lineView.snp.makeConstraints { (make) in
+            make.left.right.equalTo(self.view).offset(0)
+            make.top.equalTo(self.view).offset(104.5)
+            make.height.equalTo(0.5)
+        }
+
         addViewControllers()
     }
-    
     
     
     // MARK: - 请求数据

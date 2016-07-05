@@ -147,7 +147,7 @@ const char *finishedHandlerKey = "finishedHandlerKey";
     self.progressHUD.minSize = CGSizeMake(ScreenWidth * 0.8, 110);
     [self.progressHUD show:YES];
     
-    [self performSelector:@selector(hideHUD) withObject:nil afterDelay:1.5];
+    [self performSelector:@selector(hideHUD) withObject:nil afterDelay:2.5];
 }
 
 - (void)myTask

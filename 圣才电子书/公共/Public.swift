@@ -104,6 +104,3 @@ public let e_bookNumberUrl:String = "http://app.100xuexi.com/App/StatisticsHandl
 public let hotspotGetCategoryUrl:String = "http://app.100xuexi.com/App/UserCommonCategory.ashx?method=GetCategory"
 //获取热点单个种类下置顶文章
 public let hotspotGetTopArticleUrl:String = "http://app.100xuexi.com/App/ArticleHandle.ashx/?CategroyId=85&PageSize=10&method=GetTopArticle&noCache=1&PageIndex=0"
-//获取热点单个种类文章
-public let hotspotGetAllByParamUrl:String = "http://app.100xuexi.com/app/TalkHandler/TalkQuery.ashx?method=GetAllByParam3&noCache=1&CategoryID=43&deviceNo=ios&pageIndex=1&pageSize=10&studyNumber=2742573&type=0"
-

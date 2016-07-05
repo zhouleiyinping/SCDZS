@@ -31,12 +31,6 @@ class SCBaseViewController: UIViewController {
             make.top.equalTo(titleView).offset(20)
         })
         
-        bottomView.addSubview(self.titleLabel)
-        self.titleLabel.snp.makeConstraints(closure: { (make) in
-            make.centerY.equalTo(bottomView.snp.centerY).offset(0)
-            make.centerX.equalTo(bottomView.snp.centerX).offset(0)
-        })
-        
         bottomView.addSubview(self.backBtn)
         self.backBtn.snp.makeConstraints(closure: { (make) in
             make.centerY.equalTo(bottomView.snp.centerY).offset(0)
@@ -60,6 +54,15 @@ class SCBaseViewController: UIViewController {
             make.height.equalTo(20)
         })
         
+        bottomView.addSubview(self.titleLabel)
+        self.titleLabel.snp.makeConstraints(closure: { (make) in
+            make.centerY.equalTo(bottomView.snp.centerY).offset(0)
+            make.centerX.equalTo(bottomView.snp.centerX).offset(0)
+            make.left.equalTo(bottomView).offset(65)
+            make.right.equalTo(bottomView).offset(-65)
+            
+        })
+
         
         return titleView
     }()
