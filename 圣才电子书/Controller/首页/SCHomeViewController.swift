@@ -7,50 +7,89 @@
 //
 
 import UIKit
-import RxSwift
 
 class SCHomeViewController: SCBaseViewController {
 
-    lazy var homeTitleView:SCHomeTitleView = {
-        
-        let homeTitleView = SCHomeTitleView.init()
-        homeTitleView.backgroundColor = UIColor.whiteColor()
-          return homeTitleView
-    }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.titleLabel.text = "首页"
-        self.view.backgroundColor = BgColor
-        self.titleView.hidden = true
+        self.view.addSubview(mainView)
+        mainView.snp.makeConstraints { (make) in
+            make.left.right.equalTo(self.view).offset(0)
+            make.top.equalTo(self.view).offset(0)
+            make.bottom.equalTo(self.view).offset(50)
+        }
         
-        self.view.addSubview(self.homeTitleView)
-        self.homeTitleView.snp.makeConstraints { (make) in
-            make.top.left.right.equalTo(self.view).offset(0)
-            make.height.equalTo(NavigationH)
+        self.showHUD()
+        homeRequest.requestHomeDataSouce({ (successModelArray) in
+            self.hideHUD()
+            self.mainView.homeModelArray = successModelArray
+            
+            }) { (error) in
+                self.hideHUD()
+                self.showErrorHUDWithMessage("出错了")
+        }
+        
+        
+        self.mainView.MainHotSpotsSignal.subscribeNext { (value) in
+            
+            let model = value as! SCHomeHotSpotsModel
+            let webView = SCWebViewController()
+            webView.url = model.url!
+            webView.titleLabel.text = model.title!
+            self.navigationController?.pushViewController(webView, animated: true)
             
         }
         
-        homeTitleView.homeRichScan.rac_signalForControlEvents(UIControlEvents.TouchUpInside).subscribeNext { (value) in
-            SCLog("点击了扫一扫")
-            self.navigationController?.pushViewController(SCLkkViewController(), animated: true)
+        self.mainView.MainDiscoverSignal.subscribeNext { (value) in
+            
+            let model = value as! SCHomeDiscoverModel
+            
+            if model.tab_name! == "热点" {
+                
+                self.tabBarController?.selectedIndex = 2
+                
+            }else {
+                
+                let webView = SCWebViewController()
+                webView.url = model.href_link!
+                webView.titleLabel.text = model.tab_name!
+                self.navigationController?.pushViewController(webView, animated: true)
+            }
         }
         
-        homeTitleView.homeSchoolmate.rac_signalForControlEvents(UIControlEvents.TouchUpInside).subscribeNext { (value) in
-            SCLog("点击了学友群")
-        }
+        
+        self.mainView.MainCategoryNavigationSignal.subscribeNext { (value) in
+            
+            let model = value as! SCHomeCategoryNavigationModel
 
-        homeTitleView.homeSearchBoxVoice.rac_signalForControlEvents(UIControlEvents.TouchUpInside).subscribeNext { (value) in
-           SCLog("点击了语音")
+            if model.name! == "电子书" {
+                self.tabBarController?.selectedIndex = 1
+
+            }else {
+                
+                print(model.name!)
+            }
         }
-        
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
     }
     
+    
+    lazy var mainView:SCHomeMainView = {
+        var mainView = SCHomeMainView()
+        return mainView
+    }()
+    
+    
+    // MARK: - SCMyCenterVM
+    lazy var homeRequest:SCHomeVM = {
+        let homeRequest = SCHomeVM()
+        return homeRequest
+    }()
     
     
 }

@@ -81,7 +81,6 @@ func SCHexColor(hexString: String) -> UIColor{
     
 }
 
-
 // MARK: - 全局常用属性
 public let NavigationH: CGFloat = 64
 public let ScreenWidth: CGFloat = UIScreen.mainScreen().bounds.size.width
@@ -102,5 +101,14 @@ public let E_BookUrl:String = "http://emobile.100xuexi.com/api/v1/book_class.php
 public let e_bookNumberUrl:String = "http://app.100xuexi.com/App/StatisticsHandler/Statistics.ashx?method=GetTotalStatic"
 //获取热点所有种类
 public let hotspotGetCategoryUrl:String = "http://app.100xuexi.com/App/UserCommonCategory.ashx?method=GetCategory"
-//获取热点单个种类下置顶文章
-public let hotspotGetTopArticleUrl:String = "http://app.100xuexi.com/App/ArticleHandle.ashx/?CategroyId=85&PageSize=10&method=GetTopArticle&noCache=1&PageIndex=0"
+//首页
+public let homeUrl:String = "http://app.100xuexi.com/App/ServiceConfig/AppPageConfig.ashx?method=GetPageConf&pageid=1"
+
+//电子书分类详情
+public let book_classUrl:String =  "http://emobile.100xuexi.com/api/v1/book_class.php?&level=1&main=757"
+
+
+
+
+
+

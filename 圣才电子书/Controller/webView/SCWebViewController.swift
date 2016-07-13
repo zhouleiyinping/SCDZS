@@ -15,6 +15,7 @@ class SCWebViewController: SCBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         self.searchBtn.hidden = true
         self.homeBtn.hidden = true
         

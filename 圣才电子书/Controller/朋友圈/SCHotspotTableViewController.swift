@@ -41,6 +41,7 @@ class SCHotspotTableViewController: UITableViewController {
             wself?.dataSouceArray += successModelArray
             wself?.currentPageIndex = (wself?.currentPageIndex)!+1
 
+            wself?.setHeaderVierw(self.topArticleModelArray)
             wself?.tableView.reloadData()
             
             }) { (error) in
@@ -50,6 +51,27 @@ class SCHotspotTableViewController: UITableViewController {
                 wself?.hideLoadingMore()
         }
     }
+    
+    func  setHeaderVierw(dataArray:[topArticleModel]) {
+        
+        let headerView = SCHotspotHeaderView.init(frame: CGRectMake(0, 64, ScreenWidth, (CGFloat(dataArray.count) * 35)+1))
+        headerView.topArticleModelArray = self.topArticleModelArray
+        headerView.backgroundColor = RGB(255, g: 255, b: 255)
+        headerView.delegateSignal = RACSubject.init()
+        headerView.delegateSignal.subscribeNext { (value) in
+            let topValue = value as! topArticleModel
+            
+            if !topValue.url!.isEmpty || !topValue.title!.isEmpty {
+                self.goToWebView(topValue.url!,titleName: topValue.title!)
+            }else {
+                
+                self.showErrorHUDWithMessage("骚年,SCHotspotTableViewController55行有个值为空，再检查检查吧")
+            }
+        }
+        self.tableView.tableHeaderView = headerView
+    }
+    
+    
     
     func requesrTopArticleDataSouce() {
         
@@ -164,31 +186,6 @@ extension SCHotspotTableViewController{
         }
     }
     
-    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return (CGFloat(self.topArticleModelArray.count) * 35)+1
-    }
-    
-    override func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView {
-        
-        let headerView = SCHotspotHeaderView()
-        headerView.topArticleModelArray = self.topArticleModelArray
-        headerView.backgroundColor = RGB(255, g: 255, b: 255)
-        headerView.delegateSignal = RACSubject.init()
-        headerView.delegateSignal.subscribeNext { (value) in
-            let topValue = value as! topArticleModel
-            
-            if !topValue.url!.isEmpty || !topValue.title!.isEmpty {
-                self.goToWebView(topValue.url!,titleName: topValue.title!)
-            }else {
-                
-                self.showErrorHUDWithMessage("骚年,SCHotspotTableViewController184行有个值为空，再检查检查吧")
-
-            }
-
-        }
-        return headerView
-    }
-    
     override  func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         let talksModel =  dataSouceArray[indexPath.row]
 
@@ -215,14 +212,13 @@ extension SCHotspotTableViewController{
             
         }else {
             
-            self.showErrorHUDWithMessage("骚年,SCHotspotTableViewController217行有个值为空，再检查检查吧")
+            self.showErrorHUDWithMessage("骚年,SCHotspotTableViewController215行有个值为空，再检查检查吧")
         }
  
     }
     
        
     func  goToWebView(url:String,titleName:String) {
-        
         
         let webView = SCWebViewController()
         webView.url = url
