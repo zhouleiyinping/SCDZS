@@ -15,12 +15,11 @@ class SCWebViewController: SCBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
         self.searchBtn.hidden = true
         self.homeBtn.hidden = true
         
-        self.view.backgroundColor = RGB(245, g: 245, b: 245)
         
+        self.view.backgroundColor = RGB(245, g: 245, b: 245)
         self.view.addSubview(myWebView)
         
         //因为不同url加载的数据内容不同，有的带广告，有的不带，所以此处区分一下然后给不同的frame，防止遮挡住或超出新闻内容

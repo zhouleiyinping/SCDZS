@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SCMyCenterViewController: SCBaseViewController,UITableViewDelegate,UITableViewDataSource {
+class SCMyCenterViewController: SCBaseViewController {
 
     /// 数据源
     var dataArray  = [SCMyCenterModel]()
@@ -21,7 +21,6 @@ class SCMyCenterViewController: SCBaseViewController,UITableViewDelegate,UITable
         self.homeBtn.hidden = true
         self.searchBtn.hidden = true
         self.titleLabel.text = "我"
-//        self.titleView.backgroundColor = RGB(217, g: 40, b: 102)
         
         self.view.addSubview(self.tableView)
         self.tableView.snp.makeConstraints { (make) in
@@ -81,7 +80,11 @@ class SCMyCenterViewController: SCBaseViewController,UITableViewDelegate,UITable
         return tableView
     }()
     
-    // MARK: - UITableViewDelegate/UITableViewDataSource
+
+}
+
+extension SCMyCenterViewController:UITableViewDelegate,UITableViewDataSource {
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
         return self.dataArray.count
@@ -89,7 +92,7 @@ class SCMyCenterViewController: SCBaseViewController,UITableViewDelegate,UITable
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        let myCenterModel = self.dataArray[section] 
+        let myCenterModel = self.dataArray[section]
         
         return myCenterModel.tabsArray.count
     }
@@ -100,7 +103,7 @@ class SCMyCenterViewController: SCBaseViewController,UITableViewDelegate,UITable
         let myCenterModelTabs = myCenterModel.tabsArray[indexPath.row]
         
         let  cell = tableView.dequeueReusableCellWithIdentifier("SCMyCenterCell", forIndexPath: indexPath) as! SCMyCenterCell
-
+        
         cell.selectionStyle = UITableViewCellSelectionStyle.None
         cell.basicDataSouce = myCenterModelTabs
         
@@ -118,8 +121,9 @@ class SCMyCenterViewController: SCBaseViewController,UITableViewDelegate,UITable
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-
+        
         tableView.deselectRowAtIndexPath(indexPath, animated: false)
         
     }
+
 }

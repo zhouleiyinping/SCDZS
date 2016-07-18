@@ -40,6 +40,7 @@ class SCHomeMainView: UIView {
         homeTableView.registerClass(SCHomeDiscoverCell.self, forCellReuseIdentifier: "SCHomeDiscoverCell")
         homeTableView.registerClass(SCCategoryNavigationCell.self, forCellReuseIdentifier: "SCCategoryNavigationCell")
         homeTableView.registerClass(SCHomeHotSpotsCell.self, forCellReuseIdentifier: "SCHomeHotSpotsCell")
+        homeTableView.registerClass(SCHomeMainTableViewCell.self, forCellReuseIdentifier: "SCHomeMainTableViewCell")
 
         homeTableView.separatorStyle = UITableViewCellSeparatorStyle.None
         return homeTableView
@@ -78,39 +79,39 @@ extension SCHomeMainView:UITableViewDelegate,UITableViewDataSource {
         
         let homeModel = self.homeModelArray[indexPath.row ]
         
-        
         switch homeModel.cellType {
         case .PictureBy,.OldPictureBy:
             
         let cell = tableView.dequeueReusableCellWithIdentifier("SCHomePictureByCell", forIndexPath: indexPath) as! SCHomePictureByCell
-            
             cell.homeCarouselModelArray = homeModel.homeCarouselModelArray
-        
+        cell.selectionStyle = UITableViewCellSelectionStyle.None
+
             return cell
             
         case .spaceCell:
             
             let cell = tableView .dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
             cell.backgroundColor = BgColor
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
             return cell
             
         case .Discover:
             
             let cell = tableView.dequeueReusableCellWithIdentifier("SCHomeDiscoverCell", forIndexPath: indexPath) as! SCHomeDiscoverCell
-            
             cell.homeDiscoverModelArray = homeModel.homeDiscoverModelArray
             cell.selectionStyle = UITableViewCellSelectionStyle.None
-            
             cell.DiscoverSignal.subscribeNext({ (value) in
-                
                 self.MainDiscoverSignal.sendNext(value)
             })
+            
             
             return cell
         case .HotSpots:
             
             let cell = tableView.dequeueReusableCellWithIdentifier("SCHomeHotSpotsCell", forIndexPath: indexPath) as! SCHomeHotSpotsCell
             cell.homeHotSpotsModelArray = homeModel.homeHotSpotsModelArray
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
+
             cell.HotSpotsSignal.subscribeNext({ (value) in
             self.MainHotSpotsSignal.sendNext(value)
             })
@@ -119,10 +120,17 @@ extension SCHomeMainView:UITableViewDelegate,UITableViewDataSource {
             
             let cell = tableView.dequeueReusableCellWithIdentifier("SCCategoryNavigationCell", forIndexPath: indexPath) as! SCCategoryNavigationCell
             cell.homeCategoryNavigationModelArray = homeModel.homeCategoryNavigationModelArray
-            
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
+
             cell.CategoryNavigationSignal.subscribeNext({ (value) in
                 self.MainCategoryNavigationSignal.sendNext(value)
             })
+            return cell
+        case .MainCell:
+            
+            let cell = SCHomeMainTableViewCell.init(style: UITableViewCellStyle.Default, reuseIdentifier: "SCHomeMainTableViewCell")
+            cell.selectionStyle = UITableViewCellSelectionStyle.None
+            cell.homeMainModelArray  = homeModel.homeMainModelArray
             return cell
         default:
             let cell = tableView .dequeueReusableCellWithIdentifier("cell", forIndexPath: indexPath)
@@ -152,8 +160,9 @@ extension SCHomeMainView:UITableViewDelegate,UITableViewDataSource {
             return 60
         case .CategoryNavigation:
             return 150
-        default:
-            return 200
+        case .MainCell:
+            return 450
+       
         }
     }
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SCFindViewController: SCBaseViewController ,UITableViewDelegate,UITableViewDataSource {
+class SCFindViewController: SCBaseViewController  {
 
     /// 数据源
     var dataArray  = [SCMyCenterModel]()
@@ -69,7 +69,10 @@ class SCFindViewController: SCBaseViewController ,UITableViewDelegate,UITableVie
         return tableView
     }()
     
-    // MARK: - UITableViewDelegate/UITableViewDataSource
+    
+}
+extension SCFindViewController:UITableViewDelegate,UITableViewDataSource {
+    
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         
         return self.dataArray.count

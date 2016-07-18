@@ -13,6 +13,7 @@ class SCCategoryNavigationCell: UITableViewCell {
     
     var homeCategoryNavigationModelArray = [SCHomeCategoryNavigationModel]() {
         
+              
         didSet{
             
             let topBottomClearance = 150 / 3
@@ -32,6 +33,7 @@ class SCCategoryNavigationCell: UITableViewCell {
 
                 }
                 titleButton.tag = i+100
+                titleButton.titleLabel?.font = SCFont(15)
                 titleButton.addTarget(self, action: #selector(SCCategoryNavigationCell.clickButton(_:)), forControlEvents: UIControlEvents.TouchUpInside)
                 titleButton.setTitleColor(RGB(97, g: 110, b: 139), forState: UIControlState.Normal)
                 titleButton.setTitleColor(UIColor.redColor(), forState: UIControlState.Selected)

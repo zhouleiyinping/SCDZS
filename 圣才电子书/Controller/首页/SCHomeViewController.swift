@@ -14,14 +14,17 @@ class SCHomeViewController: SCBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.view.backgroundColor = BgColor
+        
         self.view.addSubview(mainView)
         mainView.snp.makeConstraints { (make) in
             make.left.right.equalTo(self.view).offset(0)
             make.top.equalTo(self.view).offset(0)
-            make.bottom.equalTo(self.view).offset(50)
+            make.bottom.equalTo(self.view).offset(-40)
         }
         
         self.showHUD()
+        // MARK: - 请求首页数据
         homeRequest.requestHomeDataSouce({ (successModelArray) in
             self.hideHUD()
             self.mainView.homeModelArray = successModelArray
@@ -32,6 +35,7 @@ class SCHomeViewController: SCBaseViewController {
         }
         
         
+        // MARK: - 点击今日热点
         self.mainView.MainHotSpotsSignal.subscribeNext { (value) in
             
             let model = value as! SCHomeHotSpotsModel
@@ -42,6 +46,21 @@ class SCHomeViewController: SCBaseViewController {
             
         }
         
+        var hotSpotsModel = SCHomeHotSpotsModel()
+        self.mainView.MainHotSpotsSignal.subscribeNext({ (value) in
+            
+            hotSpotsModel = value as! SCHomeHotSpotsModel
+            
+            }) {
+                let webView = SCWebViewController()
+                webView.url = hotSpotsModel.url!
+                webView.titleLabel.text = hotSpotsModel.title!
+                self.navigationController?.pushViewController(webView, animated: true)
+        }
+        
+        
+        
+        // MARK: - 点击热点、爆笑、奇闻、测试
         self.mainView.MainDiscoverSignal.subscribeNext { (value) in
             
             let model = value as! SCHomeDiscoverModel
@@ -59,7 +78,8 @@ class SCHomeViewController: SCBaseViewController {
             }
         }
         
-        
+      
+        // MARK: - 点击产品分类导航
         self.mainView.MainCategoryNavigationSignal.subscribeNext { (value) in
             
             let model = value as! SCHomeCategoryNavigationModel
@@ -69,16 +89,12 @@ class SCHomeViewController: SCBaseViewController {
 
             }else {
                 
-                print(model.name!)
+                print(model.id!)
             }
         }
     }
-    
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
-    
+  
+    // MARK: - SCHomeMainView
     lazy var mainView:SCHomeMainView = {
         var mainView = SCHomeMainView()
         return mainView
