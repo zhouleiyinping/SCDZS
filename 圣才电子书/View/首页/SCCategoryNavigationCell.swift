@@ -13,6 +13,7 @@ class SCCategoryNavigationCell: UITableViewCell {
     
     var homeCategoryNavigationModelArray = [SCHomeCategoryNavigationModel]() {
         
+        
               
         didSet{
             

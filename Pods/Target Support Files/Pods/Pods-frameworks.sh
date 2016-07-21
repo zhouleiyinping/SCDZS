@@ -84,8 +84,12 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods/AEXML.framework"
   install_framework "Pods/Alamofire.framework"
+  install_framework "Pods/FolioReaderKit.framework"
+  install_framework "Pods/FontBlaster.framework"
   install_framework "Pods/HMSegmentedControl.framework"
+  install_framework "Pods/JSQWebViewController.framework"
   install_framework "Pods/Kingfisher.framework"
   install_framework "Pods/MBProgressHUD.framework"
   install_framework "Pods/MJRefresh.framework"
@@ -93,12 +97,19 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/ReactiveCocoa.framework"
   install_framework "Pods/Result.framework"
   install_framework "Pods/SKPhotoBrowser.framework"
+  install_framework "Pods/SSZipArchive.framework"
   install_framework "Pods/SnapKit.framework"
   install_framework "Pods/SwiftyJSON.framework"
+  install_framework "Pods/UIMenuItem_CXAImageSupport.framework"
+  install_framework "Pods/ZFDragableModalTransition.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods/AEXML.framework"
   install_framework "Pods/Alamofire.framework"
+  install_framework "Pods/FolioReaderKit.framework"
+  install_framework "Pods/FontBlaster.framework"
   install_framework "Pods/HMSegmentedControl.framework"
+  install_framework "Pods/JSQWebViewController.framework"
   install_framework "Pods/Kingfisher.framework"
   install_framework "Pods/MBProgressHUD.framework"
   install_framework "Pods/MJRefresh.framework"
@@ -106,6 +117,9 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods/ReactiveCocoa.framework"
   install_framework "Pods/Result.framework"
   install_framework "Pods/SKPhotoBrowser.framework"
+  install_framework "Pods/SSZipArchive.framework"
   install_framework "Pods/SnapKit.framework"
   install_framework "Pods/SwiftyJSON.framework"
+  install_framework "Pods/UIMenuItem_CXAImageSupport.framework"
+  install_framework "Pods/ZFDragableModalTransition.framework"
 fi

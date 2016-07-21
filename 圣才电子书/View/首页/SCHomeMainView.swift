@@ -82,7 +82,7 @@ extension SCHomeMainView:UITableViewDelegate,UITableViewDataSource {
         switch homeModel.cellType {
         case .PictureBy,.OldPictureBy:
             
-        let cell = tableView.dequeueReusableCellWithIdentifier("SCHomePictureByCell", forIndexPath: indexPath) as! SCHomePictureByCell
+        let cell = SCHomePictureByCell.init(style: UITableViewCellStyle.Default, reuseIdentifier: "SCHomePictureByCell")
             cell.homeCarouselModelArray = homeModel.homeCarouselModelArray
         cell.selectionStyle = UITableViewCellSelectionStyle.None
 
@@ -97,7 +97,7 @@ extension SCHomeMainView:UITableViewDelegate,UITableViewDataSource {
             
         case .Discover:
             
-            let cell = tableView.dequeueReusableCellWithIdentifier("SCHomeDiscoverCell", forIndexPath: indexPath) as! SCHomeDiscoverCell
+            let cell = SCHomeDiscoverCell.init(style: UITableViewCellStyle.Default, reuseIdentifier: "SCHomeDiscoverCell")
             cell.homeDiscoverModelArray = homeModel.homeDiscoverModelArray
             cell.selectionStyle = UITableViewCellSelectionStyle.None
             cell.DiscoverSignal.subscribeNext({ (value) in
@@ -108,7 +108,7 @@ extension SCHomeMainView:UITableViewDelegate,UITableViewDataSource {
             return cell
         case .HotSpots:
             
-            let cell = tableView.dequeueReusableCellWithIdentifier("SCHomeHotSpotsCell", forIndexPath: indexPath) as! SCHomeHotSpotsCell
+            let cell = SCHomeHotSpotsCell.init(style: UITableViewCellStyle.Default, reuseIdentifier: "SCHomeHotSpotsCell")
             cell.homeHotSpotsModelArray = homeModel.homeHotSpotsModelArray
             cell.selectionStyle = UITableViewCellSelectionStyle.None
 
@@ -118,7 +118,7 @@ extension SCHomeMainView:UITableViewDelegate,UITableViewDataSource {
             return cell
         case .CategoryNavigation:
             
-            let cell = tableView.dequeueReusableCellWithIdentifier("SCCategoryNavigationCell", forIndexPath: indexPath) as! SCCategoryNavigationCell
+            let cell = SCCategoryNavigationCell.init(style: UITableViewCellStyle.Default, reuseIdentifier: "SCCategoryNavigationCell")
             cell.homeCategoryNavigationModelArray = homeModel.homeCategoryNavigationModelArray
             cell.selectionStyle = UITableViewCellSelectionStyle.None
 

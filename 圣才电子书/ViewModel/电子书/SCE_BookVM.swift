@@ -36,6 +36,8 @@ class SCE_BookVM: NSObject {
                         /// 获取的数据是字典
                         guard let JsonData = response.result.value as? NSDictionary else { return }
                         
+                        SCLog(JsonData)
+                        
                         /// 数组里都是字典
                         let totalNum = JsonData["totalNum"] as? NSDictionary
                         

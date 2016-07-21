@@ -59,7 +59,6 @@ class SCHomeViewController: SCBaseViewController {
         }
         
         
-        
         // MARK: - 点击热点、爆笑、奇闻、测试
         self.mainView.MainDiscoverSignal.subscribeNext { (value) in
             
@@ -89,7 +88,26 @@ class SCHomeViewController: SCBaseViewController {
 
             }else {
                 
-                print(model.id!)
+                self.showHUD()
+                
+                let e_BookClassifiedRequest = SCE_BookClassifiedVM.init(booksId: model.id!)
+                
+                var e_BookClassifiedArray = [SCE_BookClassifiedModel]()
+                // 发送请求
+                let signal = e_BookClassifiedRequest.requestCommand.execute(nil)
+                signal.subscribeNext({ (value) in
+                    e_BookClassifiedArray = value as! [SCE_BookClassifiedModel]
+                    
+                    }, error: { (error) in
+                        self.showErrorHUDWithMessage("哎呀，出错了")
+                    }, completed: {
+                        self.hideHUD()
+                        let e_BookClassifiedView = SCE_BookClassifiedViewController()
+                        e_BookClassifiedView.titleLabel.text = model.name!
+                        e_BookClassifiedView.e_BookClassifiedArray = e_BookClassifiedArray
+                        self.navigationController?.pushViewController(e_BookClassifiedView, animated: true)
+                })
+                
             }
         }
     }

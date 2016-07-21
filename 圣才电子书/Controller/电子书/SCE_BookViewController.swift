@@ -40,7 +40,53 @@ class SCE_BookViewController: SCBaseViewController{
             SCLog("点击了查看我的电子书")
 
         }
-               
+        
+        e_BookCV.DidSelectItemSignal.subscribeNext { (value) in
+            
+            let model = value as! SCE_BookModelItem
+            
+                self.showHUD()
+            
+                let e_BookClassifiedRequest = SCE_BookClassifiedVM.init(booksId: String(model.id!))
+                
+                var e_BookClassifiedArray = [SCE_BookClassifiedModel]()
+                // 发送请求
+                let signal = e_BookClassifiedRequest.requestCommand.execute(nil)
+                signal.subscribeNext({ (value) in
+                    e_BookClassifiedArray = value as! [SCE_BookClassifiedModel]
+                    
+                    }, error: { (error) in
+                        self.showErrorHUDWithMessage("哎呀，出错了")
+                    }, completed: {
+                        self.hideHUD()
+                        
+                        if model.son! == "Y" {
+                            
+                            if Int(model.EBookNum!) > 0 {
+                                let e_BookClassifiedView = SCE_BookClassifiedViewController()
+                                e_BookClassifiedView.titleLabel.text = model.name!
+                                e_BookClassifiedView.e_BookClassifiedArray = e_BookClassifiedArray
+                                self.navigationController?.pushViewController(e_BookClassifiedView, animated: true)
+                            }else {
+                                
+                                self.showOnlyWords("本分类下暂无内容，请查看其它分类")
+                            }
+
+                        } else {
+                        
+                            if Int(model.EBookNum!) > 0 {
+                                let e_BookListView = SCE_BookListViewController()
+                                e_BookListView.titleLabel.text = model.name!
+                                e_BookListView.bookId = String(model.id!)
+                                self.navigationController?.pushViewController(e_BookListView, animated: true)
+                            }else {
+                                
+                                self.showOnlyWords("本分类下暂无内容，请查看其它分类")
+                            }
+                        }
+                })
+        }
+        
         self.showHUD()
         requestDataSouce()
         

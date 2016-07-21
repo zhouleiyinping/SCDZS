@@ -61,6 +61,16 @@
 		71B5E90F1D3CAE9000844186 /* SCHomeMainCCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B5E90E1D3CAE9000844186 /* SCHomeMainCCell.swift */; };
 		71C09DBC1D34E5050000118B /* SCHomeHotSpotsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C09DBB1D34E5050000118B /* SCHomeHotSpotsCell.swift */; };
 		71C09DBE1D3636A90000118B /* SCCategoryNavigationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71C09DBD1D3636A90000118B /* SCCategoryNavigationCell.swift */; };
+		71E795E91D3DD05B009713EF /* SCE_BookClassifiedVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E795E81D3DD05B009713EF /* SCE_BookClassifiedVM.swift */; };
+		71E795EC1D3DD344009713EF /* SCE_BookClassifiedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E795EB1D3DD344009713EF /* SCE_BookClassifiedViewController.swift */; };
+		71E795EF1D3DD4CF009713EF /* SCE_BookClassifiedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E795EE1D3DD4CF009713EF /* SCE_BookClassifiedModel.swift */; };
+		71E795F21D3DDACE009713EF /* SCE_BookClassifiedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E795F11D3DDACE009713EF /* SCE_BookClassifiedCell.swift */; };
+		71E795F41D3DF4DF009713EF /* SCE_BookClassifiedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E795F31D3DF4DF009713EF /* SCE_BookClassifiedHeaderView.swift */; };
+		71E795F61D3E07E0009713EF /* SCE_BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E795F51D3E07E0009713EF /* SCE_BookListViewController.swift */; };
+		71E795F81D3E080A009713EF /* SCE_BookListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E795F71D3E080A009713EF /* SCE_BookListTableViewCell.swift */; };
+		71E795FA1D3E1197009713EF /* SCE_BookListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E795F91D3E1197009713EF /* SCE_BookListVM.swift */; };
+		71E795FD1D3E2ED8009713EF /* SCE_BookOpenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71E795FC1D3E2ED8009713EF /* SCE_BookOpenViewController.swift */; };
+		71E796011D3F08CE009713EF /* 沧海.epub in Resources */ = {isa = PBXBuildFile; fileRef = 71E796001D3F08CE009713EF /* 沧海.epub */; };
 		71FF59BD1D28E212009F5A74 /* SCHotspotVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FF59BC1D28E212009F5A74 /* SCHotspotVM.swift */; };
 		71FF59C01D28E276009F5A74 /* SCHotspotModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71FF59BF1D28E276009F5A74 /* SCHotspotModel.swift */; };
 /* End PBXBuildFile section */
@@ -147,6 +157,16 @@
 		71B5E90E1D3CAE9000844186 /* SCHomeMainCCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCHomeMainCCell.swift; sourceTree = "<group>"; };
 		71C09DBB1D34E5050000118B /* SCHomeHotSpotsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCHomeHotSpotsCell.swift; sourceTree = "<group>"; };
 		71C09DBD1D3636A90000118B /* SCCategoryNavigationCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCCategoryNavigationCell.swift; sourceTree = "<group>"; };
+		71E795E81D3DD05B009713EF /* SCE_BookClassifiedVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCE_BookClassifiedVM.swift; sourceTree = "<group>"; };
+		71E795EB1D3DD344009713EF /* SCE_BookClassifiedViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCE_BookClassifiedViewController.swift; sourceTree = "<group>"; };
+		71E795EE1D3DD4CF009713EF /* SCE_BookClassifiedModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCE_BookClassifiedModel.swift; sourceTree = "<group>"; };
+		71E795F11D3DDACE009713EF /* SCE_BookClassifiedCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCE_BookClassifiedCell.swift; sourceTree = "<group>"; };
+		71E795F31D3DF4DF009713EF /* SCE_BookClassifiedHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCE_BookClassifiedHeaderView.swift; sourceTree = "<group>"; };
+		71E795F51D3E07E0009713EF /* SCE_BookListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCE_BookListViewController.swift; sourceTree = "<group>"; };
+		71E795F71D3E080A009713EF /* SCE_BookListTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCE_BookListTableViewCell.swift; sourceTree = "<group>"; };
+		71E795F91D3E1197009713EF /* SCE_BookListVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCE_BookListVM.swift; sourceTree = "<group>"; };
+		71E795FC1D3E2ED8009713EF /* SCE_BookOpenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCE_BookOpenViewController.swift; sourceTree = "<group>"; };
+		71E796001D3F08CE009713EF /* 沧海.epub */ = {isa = PBXFileReference; lastKnownFileType = file; path = "沧海.epub"; sourceTree = "<group>"; };
 		71FF59BC1D28E212009F5A74 /* SCHotspotVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCHotspotVM.swift; sourceTree = "<group>"; };
 		71FF59BF1D28E276009F5A74 /* SCHotspotModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCHotspotModel.swift; sourceTree = "<group>"; };
 		8133E75B154981E472B8FEFF /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -315,6 +335,7 @@
 		716370781D24BD75005B6B52 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				71E795EA1D3DD31F009713EF /* 电子书分类 */,
 				71B15FF81D2BB0A2003DBCE2 /* webView */,
 				716370811D24BD75005B6B52 /* 首页 */,
 				716370791D24BD75005B6B52 /* 发现 */,
@@ -354,6 +375,8 @@
 			isa = PBXGroup;
 			children = (
 				716370801D24BD75005B6B52 /* SCE_BookViewController.swift */,
+				71E795FC1D3E2ED8009713EF /* SCE_BookOpenViewController.swift */,
+				71E796001D3F08CE009713EF /* 沧海.epub */,
 			);
 			path = "电子书";
 			sourceTree = "<group>";
@@ -369,6 +392,7 @@
 		716370851D24BD75005B6B52 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				71E795ED1D3DD4B9009713EF /* 电子书分类 */,
 				71B15FFB1D2DE661003DBCE2 /* 首页 */,
 				71FF59BE1D28E25F009F5A74 /* 热点 */,
 				712BBA901D260C4100E388E5 /* 电子书 */,
@@ -389,6 +413,7 @@
 		716370881D24BD75005B6B52 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				71E795F01D3DDAAC009713EF /* 电子书分类 */,
 				71B3A51B1D29F08C001CE11C /* 热点or朋友圈 */,
 				712BBA961D2617BE00E388E5 /* 电子书 */,
 				712BBA8D1D26073700E388E5 /* 发现 */,
@@ -425,6 +450,7 @@
 		7163708E1D24BD75005B6B52 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				71E795E71D3DD037009713EF /* 电子书分类 */,
 				71B15FFE1D2E3449003DBCE2 /* 首页 */,
 				71FF59BB1D28E1E5009F5A74 /* 热点 */,
 				712BBA931D26106F00E388E5 /* 电子书 */,
@@ -548,6 +574,43 @@
 				71B3A5261D2A140B001CE11C /* SCHotspotHeaderView.swift */,
 			);
 			path = "热点or朋友圈";
+			sourceTree = "<group>";
+		};
+		71E795E71D3DD037009713EF /* 电子书分类 */ = {
+			isa = PBXGroup;
+			children = (
+				71E795E81D3DD05B009713EF /* SCE_BookClassifiedVM.swift */,
+				71E795F91D3E1197009713EF /* SCE_BookListVM.swift */,
+			);
+			name = "电子书分类";
+			path = "电子书分类详情";
+			sourceTree = "<group>";
+		};
+		71E795EA1D3DD31F009713EF /* 电子书分类 */ = {
+			isa = PBXGroup;
+			children = (
+				71E795EB1D3DD344009713EF /* SCE_BookClassifiedViewController.swift */,
+				71E795F51D3E07E0009713EF /* SCE_BookListViewController.swift */,
+			);
+			path = "电子书分类";
+			sourceTree = "<group>";
+		};
+		71E795ED1D3DD4B9009713EF /* 电子书分类 */ = {
+			isa = PBXGroup;
+			children = (
+				71E795EE1D3DD4CF009713EF /* SCE_BookClassifiedModel.swift */,
+			);
+			path = "电子书分类";
+			sourceTree = "<group>";
+		};
+		71E795F01D3DDAAC009713EF /* 电子书分类 */ = {
+			isa = PBXGroup;
+			children = (
+				71E795F11D3DDACE009713EF /* SCE_BookClassifiedCell.swift */,
+				71E795F71D3E080A009713EF /* SCE_BookListTableViewCell.swift */,
+				71E795F31D3DF4DF009713EF /* SCE_BookClassifiedHeaderView.swift */,
+			);
+			path = "电子书分类";
 			sourceTree = "<group>";
 		};
 		71FF59BB1D28E1E5009F5A74 /* 热点 */ = {
@@ -679,6 +742,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				716370B41D24BD75005B6B52 /* Assets.xcassets in Resources */,
+				71E796011D3F08CE009713EF /* 沧海.epub in Resources */,
 				716370B51D24BD75005B6B52 /* Images.xcassets in Resources */,
 				716370BE1D24BDA1005B6B52 /* Info.plist in Resources */,
 			);
@@ -759,12 +823,15 @@
 				712BBA921D260C5900E388E5 /* SCE-BookModel.swift in Sources */,
 				712BBA951D26108200E388E5 /* SCE_BookVM.swift in Sources */,
 				71C09DBE1D3636A90000118B /* SCCategoryNavigationCell.swift in Sources */,
+				71E795E91D3DD05B009713EF /* SCE_BookClassifiedVM.swift in Sources */,
 				710D82571D2F565B00BDB115 /* SCHomeHeaderView.swift in Sources */,
 				71B15FFD1D2DE670003DBCE2 /* SCHomeModel.swift in Sources */,
 				716370A91D24BD75005B6B52 /* SCFriendViewController.swift in Sources */,
 				716370AB1D24BD75005B6B52 /* SCHomeViewController.swift in Sources */,
+				71E795FA1D3E1197009713EF /* SCE_BookListVM.swift in Sources */,
 				71FF59BD1D28E212009F5A74 /* SCHotspotVM.swift in Sources */,
 				716370B91D24BD75005B6B52 /* SCBaseViewController.swift in Sources */,
+				71E795F81D3E080A009713EF /* SCE_BookListTableViewCell.swift in Sources */,
 				716370B61D24BD75005B6B52 /* Public.swift in Sources */,
 				716370B01D24BD75005B6B52 /* SCButton.swift in Sources */,
 				71B15FFA1D2BB0C9003DBCE2 /* SCWebViewController.swift in Sources */,
@@ -778,9 +845,11 @@
 				712BBA861D26049900E388E5 /* SCFindVM.swift in Sources */,
 				71FF59C01D28E276009F5A74 /* SCHotspotModel.swift in Sources */,
 				712BBA9C1D263E9B00E388E5 /* SCE_BookCVCell.swift in Sources */,
+				71E795EF1D3DD4CF009713EF /* SCE_BookClassifiedModel.swift in Sources */,
 				712BBA9A1D263B6100E388E5 /* SCE_BookCV.swift in Sources */,
 				716370B81D24BD75005B6B52 /* SCBaseTabBarController.swift in Sources */,
 				710D82591D2FAAEF00BDB115 /* SCHomePictureByCell.swift in Sources */,
+				71E795FD1D3E2ED8009713EF /* SCE_BookOpenViewController.swift in Sources */,
 				71B5E90D1D3CA4CB00844186 /* SCHomeMainTableViewCell.swift in Sources */,
 				716370B71D24BD75005B6B52 /* BaseNavigationController.swift in Sources */,
 				712BBA8C1D26062100E388E5 /* Extension+NSObject.swift in Sources */,
@@ -788,6 +857,8 @@
 				712BBA981D2617D500E388E5 /* SCE_BookTitleView.swift in Sources */,
 				71B160021D2E532F003DBCE2 /* SCHomeMainView.swift in Sources */,
 				71B3A5231D29F759001CE11C /* SCHotspotLinkingCell.swift in Sources */,
+				71E795F41D3DF4DF009713EF /* SCE_BookClassifiedHeaderView.swift in Sources */,
+				71E795F61D3E07E0009713EF /* SCE_BookListViewController.swift in Sources */,
 				716370AA1D24BD75005B6B52 /* SCE_BookViewController.swift in Sources */,
 				712BBA891D26054000E388E5 /* SCFindModel.swift in Sources */,
 				712BBA9E1D265AEA00E388E5 /* SCE_BookCVHeaderView.swift in Sources */,
@@ -796,7 +867,9 @@
 				716370B31D24BD75005B6B52 /* AppDelegate.swift in Sources */,
 				71B3A51D1D29F115001CE11C /* SCHotspotImageCell.swift in Sources */,
 				716370A71D24BD75005B6B52 /* SCFindViewController.swift in Sources */,
+				71E795EC1D3DD344009713EF /* SCE_BookClassifiedViewController.swift in Sources */,
 				716370BA1D24BD75005B6B52 /* UIViewController+MBProgressHUD.m in Sources */,
+				71E795F21D3DDACE009713EF /* SCE_BookClassifiedCell.swift in Sources */,
 				71B3A5251D29F8C1001CE11C /* SCHotspotTableViewVM.swift in Sources */,
 				71B3A5211D29F5FB001CE11C /* SCHotspotBaseCell.swift in Sources */,
 				716370AE1D24BD75005B6B52 /* SCMyCenterModel.swift in Sources */,

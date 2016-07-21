@@ -1,6 +1,16 @@
 PODS:
+  - AEXML (3.0.0)
   - Alamofire (3.4.1)
+  - FolioReaderKit (0.7.0):
+    - AEXML
+    - FontBlaster
+    - JSQWebViewController
+    - SSZipArchive
+    - UIMenuItem-CXAImageSupport
+    - ZFDragableModalTransition
+  - FontBlaster (2.1.5)
   - HMSegmentedControl (1.5.2)
+  - JSQWebViewController (3.0.0)
   - Kingfisher (2.4.1)
   - MBProgressHUD (0.9.2)
   - MJRefresh (3.1.9)
@@ -10,10 +20,14 @@ PODS:
   - Result (2.1.1)
   - SKPhotoBrowser (1.9.1)
   - SnapKit (0.30.0.beta1)
+  - SSZipArchive (1.4)
   - SwiftyJSON (2.3.2)
+  - UIMenuItem-CXAImageSupport (0.0.1)
+  - ZFDragableModalTransition (0.6)
 
 DEPENDENCIES:
   - Alamofire (~> 3.4.0)
+  - FolioReaderKit
   - HMSegmentedControl (~> 1.5.2)
   - Kingfisher (~> 2.4.1)
   - MBProgressHUD (~> 0.9.2)
@@ -25,8 +39,12 @@ DEPENDENCIES:
   - SwiftyJSON (~> 2.3.2)
 
 SPEC CHECKSUMS:
+  AEXML: 716fb0a8decba4a3517324a71fee3685b30233d2
   Alamofire: 01a82e2f6c0f860ade35534c8dd88be61bdef40c
+  FolioReaderKit: 38622e8f80681ed3ab888f0563d85929caa429a4
+  FontBlaster: e8f06741281040aef1a73fbcdc5a5c3a1b7a3e0e
   HMSegmentedControl: 83b9686022d2176fb6457d2bdb61e5d6393fed7d
+  JSQWebViewController: eaa6bd68d9e1426ae25ade99c9bbde4c6cdd4120
   Kingfisher: 41aed5b6c1ed8fa98cf6d75283ce89cf7890f517
   MBProgressHUD: 1569cf7ace17a8bac47aabfbb8580a49690386d1
   MJRefresh: c5f1f1653e5a1b932c90f78074f2bc86f3f9bd5e
@@ -35,6 +53,9 @@ SPEC CHECKSUMS:
   Result: 822c879f145943320cc80a9a8372378e3d699fe4
   SKPhotoBrowser: 45fad9ae67bdd24217d7808f91245c9b16fe3df9
   SnapKit: 732e8cad7910a1cb812c5c1fb58f231d7a3b49e8
+  SSZipArchive: bab21000ee11b7ba68d5880bcd87d80e4eb93e65
   SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+  UIMenuItem-CXAImageSupport: 2945e2af4487414caad801ed8ff6ac8db274e986
+  ZFDragableModalTransition: 0d294eaaba6edfcb9839595de765f9ca06a4b524
 
 COCOAPODS: 0.39.0

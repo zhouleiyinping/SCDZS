@@ -65,7 +65,7 @@ class SCHotspotTableViewController: UITableViewController {
                 self.goToWebView(topValue.url!,titleName: topValue.title!)
             }else {
                 
-                self.showErrorHUDWithMessage("骚年,SCHotspotTableViewController55行有个值为空，再检查检查吧")
+                self.showErrorHUDWithMessage("骚年,SCHotspotTableViewController68行有个值为空，再检查检查吧")
             }
         }
         self.tableView.tableHeaderView = headerView

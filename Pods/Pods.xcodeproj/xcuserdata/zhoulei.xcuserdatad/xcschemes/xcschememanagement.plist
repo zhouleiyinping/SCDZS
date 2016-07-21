@@ -4,12 +4,32 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>AEXML.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>FolioReaderKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>FontBlaster.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>HMSegmentedControl.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>JSQWebViewController.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -54,6 +74,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SSZipArchive.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>SnapKit.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -64,15 +89,20 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>UIMenuItem-CXAImageSupport.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ZFDragableModalTransition.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>000449F6B11EBCBAE688F0585EDFC571</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>154A94EFCCC90C2853CA67AA04B2EDD2</key>
+		<key>1C3E01C513318CDAD0F091667AC9E401</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -82,7 +112,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>430C3AF654655B3A649C4BE252B9913E</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>4920DB8AAEDA2B335F5650EA002499EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6B9813D7E7E5E2BAC2903B82EC58E643</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>6BA6D45EE25B3F1E8AD06E7C9E07BDA5</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>71C1DF39EE1271EA1147F993CA1439A0</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>762E74E5F6199B6B6F3A49C7864676BB</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -92,22 +147,32 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9ADE9D90410EFD8702A156CB64308636</key>
+		<key>975A5254870FB0F2862FAB6BE0BC7FDA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>AB647234299773ECBB5102240A89C8DB</key>
+		<key>9CCD5E700DD256734BB641ECC682CD4F</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DAA0E59CD44944C46C13DA1F3076278D</key>
+		<key>9E4CD448D9ED9FEF886865B0EB32731A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>DED09B3ED274B796723E1D8026FAD936</key>
+		<key>A7E484AE77268056A63472C864FD6CF9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>B8D864D7D670EA17A32A2BF0E39E19EA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>C63C017FDF371688858297801CB6616E</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -117,12 +182,17 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>E7FD1A6A23655C84A6AFFFECCA69574F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>E96E13C4D3B5B5FC0651440734C2BF4D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>FEB2ABE4D5980EEE105DA2AFBC2DFD08</key>
+		<key>F22E025554D9E9285B75028DA380E70A</key>
 		<dict>
 			<key>primary</key>
 			<true/>

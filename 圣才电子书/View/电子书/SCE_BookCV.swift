@@ -10,8 +10,11 @@ import UIKit
 
 class SCE_BookCV: UIView {
     
-    var lastIndex:NSIndexPath?
-    
+    /// 上一个cell
+    var firstIndex:NSIndexPath?
+    /// 当前的cell
+    var currentIndex:NSIndexPath?
+
     
     //数据源
     var e_BookModelArray:[SCE_BookModel] = [] {
@@ -41,6 +44,13 @@ class SCE_BookCV: UIView {
         var totalNumMode = SCE_BookTotalNumMode()
         return totalNumMode
     }()
+    
+    
+    lazy var DidSelectItemSignal:RACSubject = {
+        var DidSelectItemSignal = RACSubject.init()
+        return DidSelectItemSignal
+    }()
+    
     
 
     // MARK: - collectionView
@@ -80,29 +90,29 @@ extension SCE_BookCV:UICollectionViewDataSource,UICollectionViewDelegate,UIColle
         let e_BookModelItem = e_BookModel.itemsArray[indexPath.row]
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("SCE_BookCVCell", forIndexPath: indexPath) as! SCE_BookCVCell
         cell.e_BookModelItem = e_BookModelItem
+        
+        if indexPath == currentIndex {
+            
+            cell.bookName.textColor = UIColor.redColor()
+            cell.bookNumber.textColor = UIColor.redColor()
+        }else {
+            cell.bookName.textColor = RGB(11, g: 11, b: 11)
+            cell.bookNumber.textColor = RGB(145, g: 145, b: 145)
+        }
+        
         return cell
     }
     
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         
-        //获取当前点击的cell
-        let cell = collectionView.cellForItemAtIndexPath(indexPath) as! SCE_BookCVCell
+        let e_BookModel = e_BookModelArray[indexPath.section]
+        let e_BookModelItem = e_BookModel.itemsArray[indexPath.row]
         
-        if lastIndex != nil && lastIndex?.section == indexPath.section && lastIndex?.row == indexPath.row {
-            
-            cell.bookName.textColor = UIColor.redColor()
-            cell.bookNumber.textColor = UIColor.redColor()
-            lastIndex = nil
-
-        }else {
-            
-            cell.bookName.textColor = UIColor.cyanColor()
-            cell.bookNumber.textColor = UIColor.cyanColor()
-            
-            lastIndex = indexPath
-
-        }
+        currentIndex = indexPath
         
+        self.collectionView.reloadData()
+        
+        self.DidSelectItemSignal.sendNext(e_BookModelItem)
         
     }
     
